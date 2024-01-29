@@ -108,18 +108,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Background Color Target
 
-document.addEventListener('DOMContentLoaded', function () {
-    var targetElement = document.querySelector('[id*=section_]');    
-    var backgroundChangeElement = document.querySelector('.navbar');
+// document.addEventListener('DOMContentLoaded', function () {
+//     var targetElement = document.querySelector('[id*=section_]');    
+//     var backgroundChangeElement = document.querySelector('.navbar');
 
-    function handleScroll() {
-        var targetRect = targetElement.getBoundingClientRect();
-        if (targetRect.top >= 0 && targetRect.bottom <= window.innerHeight) {
-            backgroundChangeElement.classList.remove('is-active');
-        } else {
-            backgroundChangeElement.classList.add('is-active');
-        }
+//     function handleScroll() {
+//         var targetRect = targetElement.getBoundingClientRect();
+//         if (targetRect.top >= 0 && targetRect.bottom <= window.innerHeight) {
+//             backgroundChangeElement.classList.remove('is-active');
+//         } else {
+//             backgroundChangeElement.classList.add('is-active');
+//         }
+//     }
+
+//     window.addEventListener('scroll', handleScroll);
+// });
+
+
+// test menu
+window.onscroll = function () {
+    // console.log("El scrol se mueve");
+    const  navbar = document.querySelector('.navbar');
+    const  scroll = document.documentElement.scrollTop;
+    if (scroll > 300 || scroll) {
+        navbar.classList.add("is-active");
+    } else {
+        navbar.classList.remove("is-active");
+
     }
-
-    window.addEventListener('scroll', handleScroll);
-});
+}

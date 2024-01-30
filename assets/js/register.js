@@ -3,6 +3,10 @@ const date = new Date();
 console.log("We are working !");
 
 const btnSignUp = document.getElementById("btnSingUp");
+// const checkBoxTerm = document.getElementById("cbxTerms");
+// if(!checkBoxTerm.checked){
+//     btnSignUp.setAttribute("disabled");
+// }
 
 btnSignUp.onclick = singUpUser;
 
@@ -12,6 +16,7 @@ async function singUpUser(){
     let phone = document.signupForm.phone.value;
     let password = document.signupForm.pass.value;
     let create_date = getCurrentDate();
+    let terms  = document.signupForm.terms.value;
 
     if(name != "" && email !="" && phone != "" && password != ""){
 
@@ -50,16 +55,9 @@ async function singUpUser(){
             console.log("error trying to create user !");
         }
 
-
-        // .then(response => { return response.json() })
-        // .then(data => { console.log(data); })
-        // .catch(error => { console.log(error); })
-
-
     }else{
         console.log("some fields are empty!!");
     }
-
 
 }
 

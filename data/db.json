@@ -41,6 +41,20 @@
       "role": "User",
       "last_session": "",
       "creation_date": "Tue, 30 Jan 2024 04:00:42 GMT"
+    },
+    {
+      "id": "bec3",
+      "identification": "",
+      "name": "r",
+      "last_name": "",
+      "email": "prueba",
+      "password": "prueba",
+      "phone": "1234",
+      "gender": "",
+      "city": "",
+      "role": "User",
+      "last_session": "",
+      "creation_date": "Tue, 30 Jan 2024 04:19:39 GMT"
     }
   ],
   "lost_items": [],

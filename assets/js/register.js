@@ -13,6 +13,8 @@ function singUpUser(){
     let password = document.signupForm.pass.value;
     let create_date = getCurrentDate();
 
+    if(name != "" && email !="" && phone != "" && password != ""){
+
     let userInfo = {
         identification :"", 
         name: name, 
@@ -26,15 +28,21 @@ function singUpUser(){
         last_session: "",
         creation_date: create_date,
     }
+    console.log("we have", name, email, phone, password, create_date);
 
-    let request = fetch("")
-    .then(response =>{ return response.json()})
-    .then(data =>{ consele.log(data)})
-    .catch(error =>{console.log(error);})
+    let request = fetch("http://localhost:3000/users",
+        {method: "POST",
+        headers:{'Content-Type': 'application/json'},
+        body: JSON.stringify(userInfo)    
+        })
+        .then(response => { return response.json() })
+        .then(data => { console.log(data) })
+        .catch(error => { console.log(error); })
 
+    }else{
+        console.log("some fields are empty!!");
+    }
 
-    console.log(name, email, phone, password, create_date);
-    // console.log(getCurrentDate());
 
 }
 
@@ -43,3 +51,15 @@ function singUpUser(){
 function getCurrentDate(){
     return date.toUTCString();
 }
+
+async function test(){
+    // let  request =  fetch("http://localhost:3000/users")
+    // console.log(await request);
+
+    
+    
+    // console.log(request);
+
+}
+
+test();

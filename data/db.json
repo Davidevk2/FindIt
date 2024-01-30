@@ -1,6 +1,21 @@
 {
-    "users":[],
-    "lost_items":[],
-    "found_items":[],
-    "messages":[]
+  "users": [
+    {
+      "id": "c768",
+      "identification": "",
+      "name": "r",
+      "last_name": "",
+      "email": "r",
+      "password": "r",
+      "phone": "r",
+      "gender": "",
+      "city": "",
+      "role": "User",
+      "last_session": "",
+      "creation_date": "Tue, 30 Jan 2024 00:12:47 GMT"
+    }
+  ],
+  "lost_items": [],
+  "found_items": [],
+  "messages": []
 }

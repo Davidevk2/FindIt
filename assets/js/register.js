@@ -44,7 +44,7 @@ async function singUpUser(){
         let result = await request;
 
         if (result.ok == true || (result.status == 201 || result.status == 200)){
-            console.log("Ther was created successfully");
+            console.log("The user was created successfully");
              
             let loggin = "true";
             // clearData();

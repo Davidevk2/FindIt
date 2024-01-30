@@ -1,6 +1,8 @@
 
 
 function logout(){
-    localStorage.removeItem("login");
-    window.location.href = "login";
+    localStorage.clear();
+    setTimeout(()=>{
+        window.location.href = "login.html";
+    },2000)
 }

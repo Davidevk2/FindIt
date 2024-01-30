@@ -6,7 +6,7 @@ const btnSignUp = document.getElementById("btnSingUp");
 
 btnSignUp.onclick = singUpUser;
 
-function singUpUser(){
+async function singUpUser(){
     let name = document.signupForm.name.value;
     let email = document.signupForm.email.value;
     let phone = document.signupForm.phone.value;
@@ -34,10 +34,27 @@ function singUpUser(){
         {method: "POST",
         headers:{'Content-Type': 'application/json'},
         body: JSON.stringify(userInfo)    
-        })
-        .then(response => { return response.json() })
-        .then(data => { console.log(data) })
-        .catch(error => { console.log(error); })
+        });
+
+        let result = await request;
+
+        if (result.ok == true || (result.status == 201 || result.status == 200)){
+            console.log("Ther was created successfully");
+             
+            let loggin = "true";
+            // clearData();
+            // redirection  the user to the home part
+            localStorage.setItem("login", loggin);
+            window.location.href = "home.html";
+        }else{
+            console.log("error trying to create user !");
+        }
+
+
+        // .then(response => { return response.json() })
+        // .then(data => { console.log(data); })
+        // .catch(error => { console.log(error); })
+
 
     }else{
         console.log("some fields are empty!!");
@@ -52,14 +69,11 @@ function getCurrentDate(){
     return date.toUTCString();
 }
 
+// clearData();
+
 async function test(){
     // let  request =  fetch("http://localhost:3000/users")
     // console.log(await request);
-
-    
-    
     // console.log(request);
-
 }
-
-test();
+// test();

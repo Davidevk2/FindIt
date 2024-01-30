@@ -69,9 +69,9 @@ function getCurrentDate(){
 
 // clearData();
 
-async function test(){
-    // let  request =  fetch("http://localhost:3000/users")
-    // console.log(await request);
-    // console.log(request);
-}
+// async function test(){
+//     // let  request =  fetch("http://localhost:3000/users")
+//     // console.log(await request);
+//     // console.log(request);
+// }
 // test();

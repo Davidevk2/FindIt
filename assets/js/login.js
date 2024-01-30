@@ -37,6 +37,13 @@ async function getDataByUser(){
 
 }
 
+// Show password
+const cbxShow = document.getElementById('show');
+cbxShow.addEventListener("click", ()=>{
+    const  inputPass = document.getElementById('inputPass');
+    inputPass.type === "password" ? inputPass.type = "text" : inputPass.type = "password";
+});
+
 
     // function login(){
     //     localStorage.setItem("login", "True");

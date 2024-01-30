@@ -27,6 +27,20 @@
       "role": "User",
       "last_session": "",
       "creation_date": "Tue, 30 Jan 2024 00:49:41 GMT"
+    },
+    {
+      "id": "5484",
+      "identification": "",
+      "name": "josefina",
+      "last_name": "",
+      "email": "josefa@gmail.com",
+      "password": "12345",
+      "phone": "12345",
+      "gender": "",
+      "city": "",
+      "role": "User",
+      "last_session": "",
+      "creation_date": "Tue, 30 Jan 2024 04:00:42 GMT"
     }
   ],
   "lost_items": [],

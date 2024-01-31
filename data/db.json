@@ -57,7 +57,21 @@
       "creation_date": "Tue, 30 Jan 2024 04:19:39 GMT"
     }
   ],
-  "lost_items": [],
+  "lost_items": [
+    {
+      "id": "e368",
+      "document_type": "ti",
+      "missing_date": "2024-01-18",
+      "owner_name": "david",
+      "details": "encontre la cedula y la cuenta bancaria",
+      "reporter_id": "String",
+      "reporter_name": "String",
+      "reporter_contact": "String",
+      "notify_by": "String",
+      "status": "String",
+      "report_date": "String"
+    }
+  ],
   "found_items": [],
   "messages": []
 }

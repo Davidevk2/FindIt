@@ -1,5 +1,4 @@
-const date = new Date();
-
+import getCurrentDate from "./date";
 console.log("We are working !");
 
 const btnSignUp = document.getElementById("btnSingUp");

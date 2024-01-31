@@ -162,7 +162,7 @@ strong {
 .custom-btn {
   background: var(--custom-btn-bg-color);
   border: 2px solid transparent;
-  border-radius: var(--border-radius-large);
+  border-radius: var(--border-radius-medium);
   color: var(--dark-color);
   font-size: var(--btn-font-size);
   font-weight: var(--font-weight-semibold);
@@ -181,7 +181,7 @@ strong {
 .custom-btn-footer {
   background: var(--custom-btn-bg-color);
   border: 2px solid transparent;
-  border-radius: var(--border-radius-large);
+  border-radius: var(--border-radius-medium);
   color: var(--footer-color);
   font-size: var(--btn-font-size);
   font-weight: var(--font-weight-semibold);
@@ -748,7 +748,7 @@ strong {
 .custom-form button[type="submit"] {
   background: var(--custom-btn-bg-hover-color);
   border: solid 2px var(--secondary-color);
-  border-radius: var(--border-radius-large);
+  border-radius: var(--border-radius-medium);
   color: var(--white-color);
   font-family: var(--title-font-family);
   font-size: var(--p-font-size);

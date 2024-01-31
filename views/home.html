@@ -7,7 +7,14 @@
 </head>
 <body>
     <button type="button" class="btn btn" onclick="logout();">log out</button>
-    <h1>You have loggin!!</h1>
+    <h1>Choose the option</h1>
+    <form action="" name="reportForm" class="form" id="optionForm">
+        <label for="">Report lost item</label>
+        <input type="radio" name="report_option" value="lost_report" id="">
+        <label for="">Report found item</label>
+        <input type="radio" name="report_option" value="found_report" id="">
+        <button  type="button" class="btn" id="btnReport">Report item</button>
+    </form>
 
     <script src="../assets/js/main.js"></script>
 </body>

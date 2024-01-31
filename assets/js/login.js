@@ -21,11 +21,9 @@ async function getDataByUser(){
         if(userLogged.length >= 1 ){
             console.log(userLogged);
 
-            localStorage.setItem("loginnn", "True");
-
-            setTimeout(()=>{
-                window.location.href = "home.html";
-            }, 1500);
+            localStorage.setItem("loginnn", "hola");
+            location.href = "./home.html";
+           
 
         }else{
             console.log("Email or password incorrects!");

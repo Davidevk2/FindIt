@@ -182,7 +182,7 @@ strong {
 .custom-btn-footer {
   background: var(--custom-btn-bg-color);
   border: 2px solid transparent;
-  border-radius: var(--border-radius-medium);
+  border-radius: var(--border-radius-small);
   color: var(--footer-color);
   font-size: var(--btn-font-size);
   font-weight: var(--font-weight-semibold);
@@ -216,18 +216,22 @@ strong {
 }
 
 .custom-btn-bg-purple {
-  background-color: var(--section-bg-color);
-  border-color: var(--section-bg-color);
-  color: var(--white-color);
-  padding: 10px;
+  background: var(--footer-color);
+  border: 2px solid transparent;
   border-radius: var(--border-radius-small);
-  width: 200px;
+  color: var(--white-color);
+  font-size: var(--btn-font-size);
+  font-weight: var(--font-weight-semibold);
+  line-height: normal;
+  transition: all 0.3s;
+  padding: 10px 20px;
+  border: 2px solid transparent;
 }
 
-.custom-btn-bg-purple:hover{
-  background-color: var(--section-bg-color);
-  border:1px solid var(--section-bg-color);
-  color: var(--white-color);
+.custom-btn-bg-purple:hover {
+  background: var(--custom-btn-bg-color);
+  color: var(--footer-color);
+  border: 2px solid var(--footer-color);
 }
 
 
@@ -780,25 +784,12 @@ strong {
 
 
 .btn{
-  width: 180px;
+  width: 160px;
 }
 
-.custom-form .btn-custom{
+.custom-form button, .custom-form .btn-custom[type="submit"] {
   background: var(--custom-btn-bg-hover-color);
   border: solid 2px var(--secondary-color);
-  border-radius: var(--border-radius-small);
-  color: var(--white-color);
-  font-family: var(--title-font-family);
-  font-size: var(--p-font-size);
-  font-weight: var(--font-weight-semibold);
-  transition: all 0.3s;
-  margin-bottom: 0;
-}
-
-.custom-form button[type="submit"] {
-  background: var(--custom-btn-bg-hover-color);
-  border: solid 2px var(--secondary-color);
-  /* border-radius: var(--border-radius-medium); */
   border-radius: var(--border-radius-small);
   color: var(--white-color);
   font-family: var(--title-font-family);
@@ -809,7 +800,9 @@ strong {
 }
 
 .custom-form button[type="submit"]:hover,
-.custom-form button[type="submit"]:focus {
+.custom-form button[type="submit"]:focus,
+.custom-form .btn-custom:hover, 
+.custom-form .btn-custom:focus {  
   background: var(--custom-btn-bg-color);
   color: var(--custom-btn-bg-hover-color);
   border: solid 2px var(--secondary-color);

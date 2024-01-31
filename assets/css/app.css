@@ -1,42 +1,5 @@
-/*---------------------------------------
-  CUSTOM PROPERTIES ( VARIABLES )             
------------------------------------------*/
-:root {
-  --white-color: #ffffff;
-  --primary-color: #0E43A0;
-  --secondary-color: #1257CF;
-  --section-bg-color: #2C2D42;
-  --custom-btn-bg-color: #ffffff;
-  --custom-btn-bg-hover-color: #1257CF;
-  --dark-color: #1E1E1E;
-  --p-color: #BCBDC0;
-  --border-color: #1257CF;
-  --link-hover-color: #0E43A0;
-  --footer-color: #2C2D42;
-
-  --body-font-family: 'Source Sans 3', sans-serif;
-  --title-font-family: 'Source Sans 3', sans-serif;
-
-  --h1-font-size: 72px;
-  --h2-font-size: 46px;
-  --h3-font-size: 36px;
-  --h4-font-size: 32px;
-  --h5-font-size: 28px;
-  --h6-font-size: 26px;
-  --p-font-size: 20px;
-  --menu-font-size: 16px;
-  --btn-font-size: 18px;
-  --copyright-font-size: 16px;
-
-  --border-radius-large: 100px;
-  --border-radius-medium: 20px;
-  --border-radius-small: 10px;
-
-  --font-weight-normal: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
-}
+@import url("./root.css"); 
+@import url("./responsive.css");
 
 body {
   background-color: var(--white-color);
@@ -764,13 +727,18 @@ strong {
     CUSTOM FORM               
   -----------------------------------------*/
 .custom-form .form-control {
-  border-radius: var(--border-radius-large);
+  border-radius: var(--border-radius-small);
+  border-color: var(--border-color);
   color: var(--p-color);
   margin-bottom: 24px;
   padding-top: 13px;
   padding-bottom: 13px;
   padding-left: 20px;
   outline: none;
+}
+
+.form-control::placeholder{
+  color: var(--border-color);
 }
 
 .form-floating>label {
@@ -897,110 +865,4 @@ strong {
 .social-icon-link:hover {
   background: var(--primary-color);
   color: var(--white-color);
-}
-
-/*---------------------------------------
-    RESPONSIVE STYLES               
-  -----------------------------------------*/
-@media screen and (max-width: 991px) {
-  h1 {
-    font-size: 48px;
-  }
-
-  h2 {
-    font-size: 36px;
-  }
-
-  h3 {
-    font-size: 32px;
-  }
-
-  h4 {
-    font-size: 28px;
-  }
-
-  h5 {
-    font-size: 20px;
-  }
-
-  h6 {
-    font-size: 18px;
-  }
-
-  .section-padding {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-
-  .navbar {
-    background-color: var(--secondary-color);
-  }
-
-  .navbar-nav .dropdown-menu {
-    position: relative;
-    left: 10px;
-    opacity: 1;
-    pointer-events: auto;
-    max-width: 155px;
-    margin-top: 10px;
-    margin-bottom: 15px;
-  }
-
-  .navbar-expand-lg .navbar-nav {
-    padding-bottom: 20px;
-  }
-
-  .navbar-expand-lg .navbar-nav .nav-link {
-    padding: 0;
-  }
-
-  .featured-section {
-    border-radius: 0 0 80px 80px;
-    padding-bottom: 50px;
-  }
-
-  .custom-block-topics-listing .custom-block-image {
-    width: auto;
-  }
-
-  .custom-block-topics-listing>.d-flex,
-  .custom-block-topics-listing-info,
-  .custom-block-topics-listing a {
-    flex-direction: column;
-  }
-
-  .timeline-container .vertical-scrollable-timeline .list-progress {
-    height: 75%;
-  }
-
-  .timeline-container .vertical-scrollable-timeline li {
-    padding-left: 135px;
-  }
-
-  .subscribe-form-wrap {
-    padding-top: 30px;
-    padding-bottom: 0;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  h1 {
-    font-size: 36px;
-  }
-
-  h2 {
-    font-size: 28px;
-  }
-
-  h3 {
-    font-size: 26px;
-  }
-
-  h4 {
-    font-size: 22px;
-  }
-
-  h5 {
-    font-size: 20px;
-  }
 }

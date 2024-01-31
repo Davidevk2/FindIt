@@ -486,7 +486,7 @@ strong {
   -----------------------------------------*/
 .custom-card{
   margin: auto;
-  max-width: 50%;
+  max-width: 45%;
   border-radius: var(--border-radius-medium);
   padding: 30px;
   transition: all 0.3s ease;
@@ -739,7 +739,7 @@ strong {
 }
 
 .contact-form .form-floating>textarea {
-  border-radius: var(--border-radius-medium);
+  border-radius: var(--border-radius-small);
   height: 150px;
 }
 

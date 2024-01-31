@@ -9,7 +9,8 @@
     --custom-btn-bg-color: #ffffff;
     --custom-btn-bg-hover-color: #1257CF;
     --dark-color: #1E1E1E;
-    --p-color: #BCBDC0;
+    /* --p-color: #BCBDC0; */
+    --p-color: #6A6A6D;
     --border-color: #6A6A6D;
     --link-hover-color: #0E43A0;
     --footer-color: #2C2D42;
@@ -30,7 +31,8 @@
   
     --border-radius-large: 100px;
     --border-radius-medium: 20px;
-    --border-radius-small: 10px;
+    /* --border-radius-small: 10px; */
+    --border-radius-small: 6px;
   
     --font-weight-normal: 400;
     --font-weight-medium: 500;

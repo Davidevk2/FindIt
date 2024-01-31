@@ -59,16 +59,19 @@
                             </ul>
                         </li>
                     </ul>
-                    <div class="d-none d-lg-block">
-                        <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
-                    </div>
+                    <ul class="navbar-nav">
+                        <div class="d-none d-lg-block">
+                            <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+                        </div>
+                        <li><button class="btn">Logout</button></li>
+                    </ul>
                 </div>
             </div>
         </nav>
 
-        <section class="header-section d-flex justify-content-center align-items-center" id="section_1">
+        <section class="header-section-normal d-flex justify-content-center align-items-center" id="section_1">
             <div class="container">
-                <div class="custom-block bg-white text-center">
+                <div class="custom-card bg-white text-center">
                     <form action="#" class="custom-form contact-form form" name="loginForm" role="form">
                         <h3 class="mb-4 pb-2">Login</h3>
 
@@ -84,10 +87,18 @@
                             <label for="">Password:</label>
                             <input type="checkbox" name="showPass" id="show"><span>Show Password</span>
                         </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12 ms-auto">
+                                <button type="button" class="btn btn-custom" id="btnLogin">login</button>
+
+                            </div>
+                            <div class="col-lg-6 col-12 ms-auto">
+                                <a href="register.html" class="custom-btn-bg-purple">Sing Up</a>
+
+                            </div>
+                        </div>
 
                         <div class="form-floating">
-                            <button type="button" class="btn" id="btnLogin">login</button>
-                            <a href="register.html">Sign Up</a>
                             <a href="#">Forge my password</a>
                         </div>
                     </form>
@@ -96,61 +107,7 @@
         </section>
 
 
-        <section class="contact-section section-padding" id="section_5">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-6 col-12">
-                        <form action="#" method="post" class="custom-form contact-form" role="form">
-                            <div class="row">
-                                <h3 class="mb-4 pb-2">We'd love to hear from you</h3>
-                                <div class="col-lg-6 col-md-6 col-12">
-
-                                    <div class="form-floating">
-                                        <input type="text" name="name" id="name" class="form-control" placeholder="Name"
-                                            required="">
-
-                                        <label for="floatingInput">Name</label>
-                                    </div>
-
-                                </div>
-
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <div class="form-floating">
-                                        <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*"
-                                            class="form-control" placeholder="Email address" required="">
-
-                                        <label for="floatingInput">Email address</label>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12 col-12">
-                                    <div class="form-floating">
-                                        <input type="text" name="subject" id="name" class="form-control"
-                                            placeholder="Name" required="">
-
-                                        <label for="floatingInput">Subject</label>
-                                    </div>
-
-                                    <div class="form-floating">
-                                        <textarea class="form-control" id="message" name="message"
-                                            placeholder="Tell me more about"></textarea>
-
-                                        <label for="floatingTextarea">Tell me more about</label>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-4 col-12 ms-auto">
-                                    <button type="submit" class="form-control">Submit</button>
-                                </div>
-
-                            </div>
-                        </form>
-                    </div>
-
-                </div>
-            </div>
-        </section>
+        
     </main>
 
     <footer class="site-footer section-padding">

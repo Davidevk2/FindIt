@@ -48,6 +48,24 @@
       "reported_date": "Thu, 01 Feb 2024 22:01:51 GMT"
     }
   ],
-  "found_items": [],
+  "found_items": [
+    {
+      "id": "5fcb",
+      "document_type": "ti",
+      "missing_date": "2024-02-01",
+      "owner_name": "Kenneth Mesa",
+      "owner_doument": "12344525",
+      "details": "Encontre una tarjeta y otros elementos",
+      "userId": "c4df",
+      "reporter_name": "david ",
+      "reporter_contact": {
+        "email": "david@gmail.com",
+        "phone": "323342"
+      },
+      "notify_by": "SMS",
+      "status": "Lost",
+      "reported_date": "Thu, 01 Feb 2024 22:58:00 GMT"
+    }
+  ],
   "messages": []
 }

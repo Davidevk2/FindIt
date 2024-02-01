@@ -1,11 +1,11 @@
 const date = new Date();
 
 const btnReport = document.getElementById("btnReport");
-const noOption = document.getElementById("noOption");   
+const noOption = document.getElementById("noOption");
 const yesOption = document.getElementById("yesOption");
 const divOtherContact = document.getElementById("other-contact");
 
-noOption.addEventListener("change", ()=>{
+noOption.addEventListener("change", () => {
     divOtherContact.style.display = "block";
 })
 yesOption.addEventListener("change", () => {
@@ -15,7 +15,7 @@ yesOption.addEventListener("change", () => {
 
 btnReport.addEventListener("click", reportLostItem);
 
-async function reportLostItem(){
+async function reportLostItem() {
     let type = document.reportForm.document_type.value;
     let lost_date = document.reportForm.lost_date.value;
     let owner_name = document.reportForm.owner_name.value;
@@ -24,12 +24,16 @@ async function reportLostItem(){
     let contact = document.reportForm.contact.value;
     let current_date = date.toUTCString();
     let reporter_name = "";
-    let reporter_contact = { email: null, phone: null};
-    let  status = "Lost";
+    let reporter_contact = { email: null, phone: null };
+    let status = "Lost";
+    let emailInput = document.reportForm.email.value;
+    let phoneInput = document.reportForm.phone.value;
 
-    let reporter_id = "";
-    if(contact == "" || contact === "Same"){
-        reporter_id = localStorage.getItem("user");
+    // get the id from the locaStorege
+    let reporter_id = localStorage.getItem("user");
+
+    if (contact == "" || contact === "Same") {
+        // reporter_id =;
 
         // request to fill the user info (contact)
         let request = await fetch(`http://localhost:3000/users/${reporter_id}`);
@@ -40,36 +44,45 @@ async function reportLostItem(){
         reporter_contact.phone = result.phone;
 
         console.log(reporter_name, reporter_contact);
-        
 
-    }else{
+
+    } else {
         // ask the info by inputs
-        reporter_contact.email = result.email;
-        reporter_contact.phone = result.phone;
+        if (emailInput != "" || phoneInput != "") {
+            reporter_name = owner_name;
+            reporter_contact.email = emailInput;
+            reporter_contact.phone = phoneInput;
+            console.log(reporter_name, reporter_contact);
+
+        } else {
+            console.log("both fiels are empty!");
+        }
     }
 
-    if(type != "" && lost_date != "" && owner_name != "" && owner_number != ""){
-         
-        let lost_item = {
+
+    if (type != "" && lost_date != "" && owner_name != "" && owner_number != "") {
+        // asing to the object the values
+        let found_item = {
             document_type: type,
             missing_date: lost_date,
             owner_name: owner_name,
+            owner_doument: owner_number,
             details: details,
-            reporter_id: reporter_id,
+            userId: reporter_id,
             reporter_name: reporter_name,
             reporter_contact: reporter_contact,
-            notify_by: "String",
+            notify_by: "SMS",
             status: status,
-            report_date: current_date
+            reported_date: current_date
         }
-        console.log(lost_item);
+        console.log(found_item);
 
         // make a request to save the lost item in the database
-        let request = fetch("http://localhost:3000/lost_items",
+        let request = fetch("http://localhost:3000/found_items",
             {
-                method: "POST",
+                method: "POST", 
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(lost_item)
+                body: JSON.stringify(found_item)
             });
 
         let result = await request;
@@ -82,7 +95,7 @@ async function reportLostItem(){
         }
 
 
-    }else{
+    } else {
         console.log("some fiels are empty!");
     }
 
@@ -90,10 +103,10 @@ async function reportLostItem(){
 }
 
 // Clean the data  from the form
-function clearData(){
-    let formulario  = document.reportForm;
+function clearData() {
+    let formulario = document.reportForm;
 
     formulario.reset();
-  
+
 }
 

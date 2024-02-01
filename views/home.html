@@ -28,18 +28,18 @@
                         <button type="button" class="btn btn-custom" onclick="logout();">Log out</button>
                         <h2 class="text-center mt-4">Choose the option</h2>
 
-                        <div class="row log text-center mt-4">
-                            <div class="custom-block col-6">
-                                <label for="">Report lost item</label>
-                                <input type="radio" name="report_option" value="lost_report" id="">
+                        <div class="row mt-4">
+                            <div class="custom-radio col-6">
+                                <input type="radio" name="report_option" value="lost_report" id="lost">
+                                <label for="lost">Report lost item</label>
                             </div>
     
-                            <div class="custom-block col-6">
-                                <label for="">Report found item</label>
-                                <input type="radio" name="report_option" value="found_report" id="">
+                            <div class="custom-radio col-6">
+                                <input type="radio" name="report_option" value="found_report" id="found">
+                                <label for="found">Report found item</label>
                             </div>
 
-                            <button type="button" class="col-12 btn btn-custom w-50 mt-4" id="btnReport">Report item</button>
+                            <button type="button" class="col-12 btn btn-custom w-50 mt-4 mx-auto" id="btnReport">Report item</button>
                         </div>
             
                     </form>

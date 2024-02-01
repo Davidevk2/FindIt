@@ -1,5 +1,4 @@
 @import url("./root.css"); 
-@import url("./responsive.css");
 
 body {
   background-color: var(--white-color);
@@ -182,7 +181,7 @@ strong {
 .custom-btn-footer {
   background: var(--custom-btn-bg-color);
   border: 2px solid transparent;
-  border-radius: var(--border-radius-medium);
+  border-radius: var(--border-radius-small);
   color: var(--footer-color);
   font-size: var(--btn-font-size);
   font-weight: var(--font-weight-semibold);
@@ -204,7 +203,8 @@ strong {
   color: var(--custom-btn-bg-color);
 }
 
-.custom-border-btn:hover {
+.custom-border-btn:hover,
+.custom-border-btn:focus {
   background: var(--custom-btn-bg-color);
   border-color: transparent;
   color: var(--dark-color);
@@ -216,18 +216,23 @@ strong {
 }
 
 .custom-btn-bg-purple {
-  background-color: var(--section-bg-color);
-  border-color: var(--section-bg-color);
-  color: var(--white-color);
-  padding: 10px;
+  background: var(--footer-color);
+  border: 2px solid transparent;
   border-radius: var(--border-radius-small);
-  width: 200px;
+  color: var(--white-color);
+  font-size: var(--btn-font-size);
+  font-weight: var(--font-weight-semibold);
+  line-height: normal;
+  transition: all 0.3s;
+  padding: 10px 20px;
+  border: 2px solid transparent;
 }
 
-.custom-btn-bg-purple:hover{
-  background-color: var(--section-bg-color);
-  border:1px solid var(--section-bg-color);
-  color: var(--white-color);
+.custom-btn-bg-purple:hover,
+.custom-btn-bg-purple:focus {
+  background: var(--custom-btn-bg-color);
+  color: var(--footer-color);
+  border: 2px solid var(--footer-color);
 }
 
 
@@ -780,25 +785,12 @@ strong {
 
 
 .btn{
-  width: 180px;
+  width: 100%;
 }
 
-.custom-form .btn-custom{
+.custom-form button, .custom-form .btn-custom[type="submit"] {
   background: var(--custom-btn-bg-hover-color);
   border: solid 2px var(--secondary-color);
-  border-radius: var(--border-radius-small);
-  color: var(--white-color);
-  font-family: var(--title-font-family);
-  font-size: var(--p-font-size);
-  font-weight: var(--font-weight-semibold);
-  transition: all 0.3s;
-  margin-bottom: 0;
-}
-
-.custom-form button[type="submit"] {
-  background: var(--custom-btn-bg-hover-color);
-  border: solid 2px var(--secondary-color);
-  /* border-radius: var(--border-radius-medium); */
   border-radius: var(--border-radius-small);
   color: var(--white-color);
   font-family: var(--title-font-family);
@@ -809,7 +801,9 @@ strong {
 }
 
 .custom-form button[type="submit"]:hover,
-.custom-form button[type="submit"]:focus {
+.custom-form button[type="submit"]:focus,
+.custom-form .btn-custom:hover, 
+.custom-form .btn-custom:focus {  
   background: var(--custom-btn-bg-color);
   color: var(--custom-btn-bg-hover-color);
   border: solid 2px var(--secondary-color);
@@ -917,3 +911,113 @@ strong {
   background: var(--primary-color);
   color: var(--white-color);
 }
+
+/*---------------------------------------
+    RESPONSIVE STYLES               
+  -----------------------------------------*/
+  @media screen and (max-width: 991px) {
+    h1 {
+      font-size: 48px;
+    }
+  
+    h2 {
+      font-size: 36px;
+    }
+  
+    h3 {
+      font-size: 32px;
+    }
+  
+    h4 {
+      font-size: 28px;
+    }
+  
+    h5 {
+      font-size: 20px;
+    }
+  
+    h6 {
+      font-size: 18px;
+    }
+  
+    .section-padding {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+  
+    .navbar {
+      background-color: var(--secondary-color);
+    }
+  
+    .navbar-nav .dropdown-menu {
+      position: relative;
+      left: 10px;
+      opacity: 1;
+      pointer-events: auto;
+      max-width: 155px;
+      margin-top: 10px;
+      margin-bottom: 15px;
+    }
+  
+    .navbar-expand-lg .navbar-nav {
+      padding-bottom: 20px;
+    }
+  
+    .navbar-expand-lg .navbar-nav .nav-link {
+      padding: 0;
+    }
+  
+    .featured-section {
+      border-radius: 0 0 80px 80px;
+      padding-bottom: 50px;
+    }
+  
+    .custom-block-topics-listing .custom-block-image {
+      width: auto;
+    }
+  
+    .custom-block-topics-listing>.d-flex,
+    .custom-block-topics-listing-info,
+    .custom-block-topics-listing a {
+      flex-direction: column;
+    }
+  
+    .timeline-container .vertical-scrollable-timeline .list-progress {
+      height: 75%;
+    }
+  
+    .timeline-container .vertical-scrollable-timeline li {
+      padding-left: 135px;
+    }
+  
+    .subscribe-form-wrap {
+      padding-top: 30px;
+      padding-bottom: 0;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    h1 {
+      font-size: 36px;
+    }
+  
+    h2 {
+      font-size: 28px;
+    }
+  
+    h3 {
+      font-size: 26px;
+    }
+  
+    h4 {
+      font-size: 22px;
+    }
+  
+    h5 {
+      font-size: 20px;
+    }
+    
+    .custom-card{
+      max-width: 95%;
+    }
+  }

@@ -27,185 +27,25 @@
       "role": "User",
       "last_session": "",
       "creation_date": "Tue, 30 Jan 2024 00:49:41 GMT"
-    },
-    {
-      "id": "5484",
-      "identification": "",
-      "name": "josefina",
-      "last_name": "",
-      "email": "josefa@gmail.com",
-      "password": "12345",
-      "phone": "12345",
-      "gender": "",
-      "city": "",
-      "role": "User",
-      "last_session": "",
-      "creation_date": "Tue, 30 Jan 2024 04:00:42 GMT"
-    },
-    {
-      "id": "bec3",
-      "identification": "",
-      "name": "r",
-      "last_name": "",
-      "email": "prueba",
-      "password": "prueba",
-      "phone": "1234",
-      "gender": "",
-      "city": "",
-      "role": "User",
-      "last_session": "",
-      "creation_date": "Tue, 30 Jan 2024 04:19:39 GMT"
-    },
-    {
-      "id": "1689",
-      "identification": "",
-      "name": "Mario",
-      "last_name": "",
-      "email": "mario@",
-      "password": "12345",
-      "phone": "7892910",
-      "gender": "",
-      "city": "",
-      "role": "User",
-      "last_session": "",
-      "creation_date": "Thu, 01 Feb 2024 05:49:17 GMT"
-    },
-    {
-      "id": "d90d",
-      "identification": "",
-      "name": "Alam Brito",
-      "last_name": "",
-      "email": "alambrito@",
-      "password": "12345",
-      "phone": "56433",
-      "gender": "",
-      "city": "",
-      "role": "User",
-      "last_session": "",
-      "creation_date": "Thu, 01 Feb 2024 05:53:29 GMT"
-    },
-    {
-      "id": "52f8",
-      "identification": "",
-      "name": "Alam brito",
-      "last_name": "",
-      "email": "alambrito",
-      "password": "12345",
-      "phone": "124211",
-      "gender": "",
-      "city": "",
-      "role": "User",
-      "last_session": "",
-      "creation_date": "Thu, 01 Feb 2024 05:54:27 GMT"
-    },
-    {
-      "id": "ae21",
-      "identification": "",
-      "name": "Alambruito",
-      "last_name": "",
-      "email": "alambirto",
-      "password": "12345",
-      "phone": "321456",
-      "gender": "",
-      "city": "",
-      "role": "User",
-      "last_session": "",
-      "creation_date": "Thu, 01 Feb 2024 05:57:58 GMT"
     }
   ],
   "lost_items": [
     {
-      "id": "e368",
-      "document_type": "ti",
-      "missing_date": "2024-01-18",
-      "owner_name": "david",
-      "details": "encontre la cedula y la cuenta bancaria",
-      "reporter_id": "String",
-      "reporter_name": "String",
-      "reporter_contact": "String",
-      "notify_by": "String",
-      "status": "String",
-      "report_date": "String"
-    },
-    {
-      "id": "38df",
+      "id": "51d2",
       "document_type": "cc",
       "missing_date": "2024-01-30",
-      "owner_name": "Pepito Perez",
-      "details": "Perdí varios documentos, la Cédula, el carnet y la civica ",
-      "reporter_id": "c4df",
+      "owner_name": "David",
+      "owner_doument": "10000",
+      "details": "Perdi la cedula y la civica ",
+      "userId": "c4df",
       "reporter_name": "david ",
       "reporter_contact": {
         "email": "david@gmail.com",
         "phone": "323342"
       },
-      "notify_by": "String",
+      "notify_by": "SMS",
       "status": "Lost",
-      "report_date": "Thu, 01 Feb 2024 04:42:15 GMT"
-    },
-    {
-      "id": "79e1",
-      "document_type": "pasaporte",
-      "missing_date": "2024-01-23",
-      "owner_name": "Joselito Munoz",
-      "details": "El pasaporte estaba con otros documentos ",
-      "reporter_id": "c4df",
-      "reporter_name": "david ",
-      "reporter_contact": {
-        "email": "david@gmail.com",
-        "phone": "323342"
-      },
-      "notify_by": "String",
-      "status": "Lost",
-      "report_date": "Thu, 01 Feb 2024 04:45:08 GMT"
-    },
-    {
-      "id": "01ea",
-      "document_type": "lconducion",
-      "missing_date": "2024-02-15",
-      "owner_name": "ROcio",
-      "details": "Perdi los papeles de la moto",
-      "reporter_id": "",
-      "reporter_name": "ROcio",
-      "reporter_contact": {
-        "email": "correo@correo.com",
-        "phone": "42256"
-      },
-      "notify_by": "String",
-      "status": "Lost",
-      "report_date": "Thu, 01 Feb 2024 05:42:47 GMT"
-    },
-    {
-      "id": "6461",
-      "document_type": "cc",
-      "missing_date": "2024-01-31",
-      "owner_name": "Mario Rocero",
-      "details": "Cédula y carnet",
-      "reporter_id": null,
-      "reporter_name": "Mario Rocero",
-      "reporter_contact": {
-        "email": "",
-        "phone": "212567"
-      },
-      "notify_by": "String",
-      "status": "Lost",
-      "report_date": "Thu, 01 Feb 2024 05:49:53 GMT"
-    },
-    {
-      "id": "c65f",
-      "document_type": "cc",
-      "missing_date": "2024-02-21",
-      "owner_name": "Alam brito",
-      "details": "cosas que perdi ",
-      "reporter_id": "ae21",
-      "reporter_name": "Alam brito",
-      "reporter_contact": {
-        "email": "alguien@com",
-        "phone": "2524433"
-      },
-      "notify_by": "String",
-      "status": "Lost",
-      "report_date": "Thu, 01 Feb 2024 05:58:39 GMT"
+      "reported_date": "Thu, 01 Feb 2024 22:01:51 GMT"
     }
   ],
   "found_items": [],

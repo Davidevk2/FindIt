@@ -66,13 +66,14 @@ async function reportLostItem(){
             document_type: type,
             missing_date: lost_date,
             owner_name: owner_name,
+            owner_doument: owner_number,
             details: details,
-            reporter_id: reporter_id,
+            userId: reporter_id,
             reporter_name: reporter_name,
             reporter_contact: reporter_contact,
-            notify_by: "String",
+            notify_by: "SMS",
             status: status,
-            report_date: current_date
+            reported_date: current_date
         }
         console.log(lost_item);
 

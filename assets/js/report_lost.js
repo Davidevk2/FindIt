@@ -25,11 +25,15 @@ async function reportLostItem(){
     let current_date = date.toUTCString();
     let reporter_name = "";
     let reporter_contact = { email: null, phone: null};
-    let  status = "Lost";
+    let status = "Lost";
+    let emailInput = document.reportForm.email.value;
+    let phoneInput = document.reportForm.phone.value;
 
-    let reporter_id = "";
+    // get the id from the locaStorege
+    let reporter_id = localStorage.getItem("user");
+
     if(contact == "" || contact === "Same"){
-        reporter_id = localStorage.getItem("user");
+        // reporter_id =;
 
         // request to fill the user info (contact)
         let request = await fetch(`http://localhost:3000/users/${reporter_id}`);
@@ -44,12 +48,20 @@ async function reportLostItem(){
 
     }else{
         // ask the info by inputs
-        reporter_contact.email = result.email;
-        reporter_contact.phone = result.phone;
+        if(emailInput != "" || phoneInput !=""){
+            reporter_name = owner_name;
+            reporter_contact.email = emailInput;
+            reporter_contact.phone = phoneInput;
+            console.log(reporter_name,reporter_contact);
+
+        }else{
+            console.log("both fiels are empty!");
+        }
     }
 
+
     if(type != "" && lost_date != "" && owner_name != "" && owner_number != ""){
-         
+        // asing to the object the values
         let lost_item = {
             document_type: type,
             missing_date: lost_date,

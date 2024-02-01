@@ -1,5 +1,4 @@
-import getCurrentDate from "./date";
-console.log("We are working !");
+const date = new Date();
 
 const btnSignUp = document.getElementById("btnSingUp");
 const checkBoxTerm = document.getElementById("cbxTerms");
@@ -35,21 +34,22 @@ async function singUpUser(){
         }
         console.log("we have", name, email, phone, password, create_date);
     
-        let request = fetch("http://localhost:3000/users",
+        let request = await fetch("http://localhost:3000/users",
             {method: "POST",
             headers:{'Content-Type': 'application/json'},
             body: JSON.stringify(userInfo)    
             });
-    
-            let result = await request;
-    
-            if (result.ok == true || (result.status == 201 || result.status == 200)){
+            
+            let response = await request;
+            let data = await response.json();
+            if (response.ok == true || (response.status == 201 || response.status == 200)){
                 console.log("The user was created successfully");
-                 
+      
                 let loggin = "true";
+                let logged = data.id;
                 // clearData();
-                // redirection  the user to the home part
                 localStorage.setItem("login", loggin);
+                localStorage.setItem("user", logged);
                 window.location.href = "home.html";
             }else{
                 console.log("error trying to create user !");

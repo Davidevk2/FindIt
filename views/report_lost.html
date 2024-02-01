@@ -6,6 +6,11 @@
     <title>FindIt - Report lost</title>
 </head>
 <body>
+    <style>
+        .hidden{
+            display: none;
+        }
+    </style>
     <button class="btn" onclick="logout()">Logout</button>
     <h1>Let's report the item!</h1>
 
@@ -41,8 +46,21 @@
         </div>
         <div class="form-group">
             <label for="">Use the same contact information:</label>
-            <input type="radio" name="contact" value="Same" id=""><label for="">Yes</label>
-            <input type="radio" name="contact" value="Other" id=""><label for="">No</label>
+            <input type="radio" name="contact" value="Same" id="yesOption"><label for="">Yes</label>
+            <input type="radio" name="contact" value="Other" id="noOption"><label for="">No</label>
+        </div>
+        <div class="other-contact hidden"  id="other-contact">
+            <div class="row">
+                <div class="form-group">
+                    <label for="">Email:</label>
+                    <input type="text" name="email" value="" class="form-control" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="">Phone:</label>
+                    <input type="text" name="phone" value="" class="form-control" placeholder="">
+                    <input type="checkbox" name="SMS" value="" class="form-control" ><span>contact by SMS</span>
+                </div>
+            </div>
         </div>
         <button type="button" class="btn" id="btnReport">Report item!</button>
     </form>

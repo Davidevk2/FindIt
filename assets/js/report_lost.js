@@ -1,7 +1,17 @@
-console.log("works !");
 const date = new Date();
 
 const btnReport = document.getElementById("btnReport");
+const noOption = document.getElementById("noOption");   
+const yesOption = document.getElementById("yesOption");
+const divOtherContact = document.getElementById("other-contact");
+
+noOption.addEventListener("change", ()=>{
+    divOtherContact.style.display = "block";
+})
+yesOption.addEventListener("change", () => {
+    divOtherContact.style.display = "none"
+})
+
 
 btnReport.addEventListener("click", reportLostItem);
 
@@ -12,8 +22,31 @@ async function reportLostItem(){
     let owner_number = document.reportForm.owner_document.value;
     let details = document.reportForm.description.value;
     let contact = document.reportForm.contact.value;
-    let report_date = date.toUTCString();
+    let current_date = date.toUTCString();
+    let reporter_name = "";
+    let reporter_contact = { email: null, phone: null};
+    let  status = "Lost";
 
+    let reporter_id = "";
+    if(contact == "" || contact === "Same"){
+        reporter_id = localStorage.getItem("user");
+
+        // request to fill the user info (contact)
+        let request = await fetch(`http://localhost:3000/users/${reporter_id}`);
+        let result = await request.json();
+
+        reporter_name = result.name;
+        reporter_contact.email = result.email;
+        reporter_contact.phone = result.phone;
+
+        console.log(reporter_name, reporter_contact);
+        
+
+    }else{
+        // ask the info by inputs
+        reporter_contact.email = result.email;
+        reporter_contact.phone = result.phone;
+    }
 
     if(type != "" && lost_date != "" && owner_name != "" && owner_number != ""){
          
@@ -22,14 +55,16 @@ async function reportLostItem(){
             missing_date: lost_date,
             owner_name: owner_name,
             details: details,
-            reporter_id: "String",
-            reporter_name: "String",
-            reporter_contact: "String",
+            reporter_id: reporter_id,
+            reporter_name: reporter_name,
+            reporter_contact: reporter_contact,
             notify_by: "String",
-            status: "String",
-            report_date: "String"
+            status: status,
+            report_date: current_date
         }
+        console.log(lost_item);
 
+        // make a request to save the lost item in the database
         let request = fetch("http://localhost:3000/lost_items",
             {
                 method: "POST",
@@ -40,12 +75,12 @@ async function reportLostItem(){
         let result = await request;
 
         if (result.ok == true || (result.status == 201 || result.status == 200)) {
-            console.log("The item was created successfully");
+            console.log("The item was reporte successfully");
+            clearData();
         } else {
             console.log("error trying to create the report !");
         }
 
-        console.log(type, lost_date, owner_name, owner_number, details, contact, report_date);
 
     }else{
         console.log("some fiels are empty!");
@@ -54,6 +89,7 @@ async function reportLostItem(){
 
 }
 
+// Clean the data  from the form
 function clearData(){
     let formulario  = document.reportForm;
 

@@ -70,6 +70,38 @@
       "notify_by": "String",
       "status": "String",
       "report_date": "String"
+    },
+    {
+      "id": "38df",
+      "document_type": "cc",
+      "missing_date": "2024-01-30",
+      "owner_name": "Pepito Perez",
+      "details": "Perdí varios documentos, la Cédula, el carnet y la civica ",
+      "reporter_id": "c4df",
+      "reporter_name": "david ",
+      "reporter_contact": {
+        "email": "david@gmail.com",
+        "phone": "323342"
+      },
+      "notify_by": "String",
+      "status": "Lost",
+      "report_date": "Thu, 01 Feb 2024 04:42:15 GMT"
+    },
+    {
+      "id": "79e1",
+      "document_type": "pasaporte",
+      "missing_date": "2024-01-23",
+      "owner_name": "Joselito Munoz",
+      "details": "El pasaporte estaba con otros documentos ",
+      "reporter_id": "c4df",
+      "reporter_name": "david ",
+      "reporter_contact": {
+        "email": "david@gmail.com",
+        "phone": "323342"
+      },
+      "notify_by": "String",
+      "status": "Lost",
+      "report_date": "Thu, 01 Feb 2024 04:45:08 GMT"
     }
   ],
   "found_items": [],

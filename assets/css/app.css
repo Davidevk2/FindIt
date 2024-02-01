@@ -448,6 +448,7 @@ strong {
   overflow: hidden;
   padding-top: 150px;
   padding-bottom: 100px;
+  height: 100vh;
 }
 
 .header-section {

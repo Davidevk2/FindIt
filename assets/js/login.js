@@ -19,9 +19,12 @@ async function getDataByUser(){
         });
         
         if(userLogged.length >= 1 ){
-            console.log(userLogged);
 
-            localStorage.setItem("loginnn", "hola");
+            let logged = userLogged[0].id;
+            console.log(userLogged);
+            
+            localStorage.setItem("login", "True");
+            localStorage.setItem("user", `${logged}`);
             location.href = "./home.html";
            
 

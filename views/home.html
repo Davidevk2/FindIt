@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="../assets/images/ico.svg" type="image/x-icon">
-    <title>Findit - Login</title>
+    <title>Findit - home</title>
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +21,7 @@
     <main>
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="./index.html">
+                <a class="navbar-brand" href="./home.html">
                     <img src="../assets/images/logo.svg" alt="logo">
                 </a>
                 <div class="d-lg-none ms-auto me-4">
@@ -34,43 +34,32 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-lg-5 me-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="searchEngine.html">Search</a>
+                            <a class="nav-link click-scroll" href="./searchEngine.html">Search</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link click-scroll" href="#section_2">Recommendations</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_3">Report</a>
+                            <a class="nav-link click-scroll" href="./reports.html">Report</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link click-scroll" href="#section_4">Notifications</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">Language</a>
-                            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">English <img src="../assets/images/us.svg" alt="us_flag"
-                                            width="20%"></a></li>
-                                <li><a class="dropdown-item" href="#">Spanish <img src="../assets/images/es.svg" alt="es_flag"
-                                            width="20%"></a></li>
-                            </ul>
-                        </li>
                     </ul>
-                    <ul class="navbar-nav">
-                        <div class="d-none d-lg-block">
-                            <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
-                        </div>
-                        <li class="nav-item"><a class="nav-link" href="#" onclick="logout();">Logout</a></li>
-                    </ul>
+                    <div class="d-none d-lg-block">
+                        <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+                    </div>
+                    <a class="log-btn ms-3" href="#" onclick="logout();">Logout</a>
                 </div>
             </div>
         </nav>
-        
+
         <section class="header-section-normal d-flex justify-content-center align-items-center">
             <div class="container">
                 <div class="custom-card bg-white">
-                    <form action="#" class="custom-form contact-form form" name="reportForm" id="optionForm" role="form">
-                        
+                    <form action="#" class="custom-form contact-form form" name="reportForm" id="optionForm"
+                        role="form">
+
                         <!-- <button type="button" class="btn btn-custom" >Log out</button> -->
                         <h2 class="text-center mt-4">Choose the option</h2>
 
@@ -79,17 +68,17 @@
                                 <input type="radio" name="report_option" value="lost_report" id="lost">
                                 <label for="lost">Report<br>lost item</label>
                             </div>
-    
+
                             <div class="custom-radio col-lg-6 col-md-6 col-12">
                                 <input type="radio" name="report_option" value="found_report" id="found">
                                 <label for="found">Report<br>found item</label>
                             </div>
-                            
+
                             <div class="col-12 mt-4 mx-auto">
                                 <button type="button" class="btn btn-custom w-100" id="btnReport">Report item</button>
-                            </div>                            
+                            </div>
                         </div>
-            
+
                     </form>
                 </div>
             </div>

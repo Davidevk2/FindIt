@@ -154,6 +154,10 @@ strong {
   color: var(--primary-color);
 }
 
+.hidden{
+  display: none;
+}
+
 
 /*---------------------------------------
     CUSTOM BUTTON               

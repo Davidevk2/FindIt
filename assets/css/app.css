@@ -201,6 +201,23 @@ strong {
   border: 2px solid var(--custom-btn-bg-color);
 }
 
+.log-btn {
+  background: var(--white-color);
+  border-radius: var(--border-radius-small);
+  display: inline-block;
+  font-size: var(--menu-font-size);
+  line-height: 10px;
+  height: 30px;
+  padding: 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.log-btn:hover {
+  background: var(--primary-color);
+  color: var(--white-color);
+}
+
 .custom-border-btn {
   background: transparent;
   border: 2px solid var(--custom-btn-bg-color);
@@ -281,6 +298,7 @@ strong {
   padding-top: 15px;
   padding-bottom: 15px;
   transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
 }
 
 .navbar-nav .nav-link.active,

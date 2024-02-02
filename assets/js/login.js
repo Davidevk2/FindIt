@@ -1,6 +1,5 @@
 const btnLogin = document.getElementById("btnLogin");
 const spanMessages = document.getElementById("messages");
-console.log(spanMessages);
 
 btnLogin.addEventListener("click", getDataByUser);
 
@@ -23,9 +22,11 @@ async function getDataByUser(){
         if(userLogged.length >= 1 ){
 
             let logged = userLogged[0].id;
+            let role = userLogged[0].role;
             
             localStorage.setItem("login", "True");
             localStorage.setItem("user", `${logged}`);
+            localStorage.setItem("role", `${role}`);
             location.href = "./home.html";
            
 

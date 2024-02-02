@@ -25,7 +25,7 @@ async function reportLostItem() {
     let current_date = date.toUTCString();
     let reporter_name = "";
     let reporter_contact = { email: null, phone: null };
-    let status = "Lost";
+    let status = "Found";
     let emailInput = document.reportForm.email.value;
     let phoneInput = document.reportForm.phone.value;
 

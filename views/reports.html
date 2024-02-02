@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindIt - My Reports</title>
+</head>
+<body>
+    <a href="searchEngine.html">Search</a>
+    <a href="reports.html">Reports</a>
+    <button class="btn" onclick="logout()">Logout</button>
+    <div class="container">
+        <div class="section lost-items">
+                <h2>List of lost reported</h2>        
+                <table class="table" id="lostTable">
+               <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Report Id</th>
+                    <th>Document</th>
+                    <th>Missin Date</th>
+                    <!-- <th></th> -->
+                    <th>Reported date</th>
+                    <th>Status</th>
+                    <th>Change status</th>
+                </tr>
+               </thead>     
+            </table>
+        </div>
+        <div class="section found-items">
+                <h2>List of found reported</h2>        
+                <table class="table" id="foundTable">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Report Id</th>
+                        <th>Document</th>
+                        <th>Missin Date</th>
+                        <!-- <th></th>
+                        <th></th> -->
+                        <th>Reported date</th>
+                        <th>Status</th>
+                        <th>Change status</th>
+
+                    </tr>
+                </thead>
+            </table>
+        </div>
+
+    </div>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/report.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+</body>
+</html>

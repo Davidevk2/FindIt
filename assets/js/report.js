@@ -10,7 +10,6 @@ window.addEventListener("DOMContentLoaded",getAllData())
 
 async function getAllData(){
     let userId = localStorage.getItem("user");
-    console.log(userId);
 
     let url = `http://localhost:3000/users/${userId}/?_embed=lost_items&_embed=found_items`;
 
@@ -26,7 +25,6 @@ async function getAllData(){
 
 // Fill the tables 
 function fillTables(data, tbTable) {
-    console.log(data.length);
     if(data.length < 1){
         let row = document.createElement("tr");
 

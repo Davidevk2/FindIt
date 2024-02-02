@@ -66,26 +66,32 @@
                 </div>
             </div>
         </nav>
-        <div class="header-section-normal">
+        <div class="header-section-normal  d-flex justify-content-center align-items-center">
             <div class="container">
                 <div class="custom-card bg-white">
                     <form action="" class="custom-form contact-form" name="signupForm">
-                        <h3 class="mb-4 pb-2">Sign Up</h3>
-                        <div class="form-floating">
-                            <input type="text" name="name" value="" class="form-control" placeholder="enter your name">
-                            <label for="">Name:</label>
+                        <h3 class="mb-4 pb-2 text-center">Sign Up</h3>
+                        <div class="row">
+                            <div class="col-md-6 col-12">
+                                <div class="form-floating">
+                                    <input type="text" name="name" value="" class="form-control" placeholder="enter your name">
+                                    <label for="">Name</label>
+                                </div>                                
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <div class="form-floating">
+                                    <input type="text" name="phone" value="" class="form-control" placeholder="enter your phone number">
+                                    <label for="">Phone</label>
+                                </div>
+                            </div>
                         </div>
                         <div class="form-floating">
                             <input type="text" name="email" value="" class="form-control" placeholder="enter your email">
-                            <label for="">Email:</label>
+                            <label for="">Email</label>
                         </div>
                         <div class="form-floating">
                             <input type="password" name="pass" value="" class="form-control" placeholder="enter your password">
-                            <label for="">Password:</label>
-                        </div>
-                        <div class="form-floating">
-                            <input type="text" name="phone" value="" class="form-control" placeholder="enter your phone number">
-                            <label for="">Phone:</label>
+                            <label for="">Password</label>
                         </div>
                         <input type="checkbox" name="contact_sms" value=""><label for="">Contact by SMS</label>
                 
@@ -94,7 +100,7 @@
                             <label for="">Terms and conditions</label>
                         </div>
                 
-                        <div class="row log">
+                        <div class="row log mt-2">
                             <div class="col-6 ms-auto">
                                 <button type="button" class="btn btn-custom" id="btnSingUp">Sing Up</button>
 

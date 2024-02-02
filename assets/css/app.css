@@ -995,6 +995,10 @@ strong {
       padding-top: 30px;
       padding-bottom: 0;
     }
+
+    .custom-card{
+      max-width: 95%;
+    }
   }
   
   @media screen and (max-width: 480px) {

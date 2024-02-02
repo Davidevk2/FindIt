@@ -2,9 +2,7 @@ const date = new Date();
 
 const btnSignUp = document.getElementById("btnSingUp");
 const checkBoxTerm = document.getElementById("cbxTerms");
-// if(!checkBoxTerm.checked){
-//     btnSignUp.setAttribute("disabled");
-// }
+const spanMessages = document.getElementById("messages");
 
 btnSignUp.onclick = singUpUser;
 
@@ -15,6 +13,9 @@ async function singUpUser(){
     let password = document.signupForm.pass.value;
     let create_date = getCurrentDate();
     let terms  = document.signupForm.terms.value;
+
+    let message = "";
+    let messageColor = "";
 
     if(checkBoxTerm.checked){
         if(name != "" && email !="" && phone != "" && password != ""){
@@ -52,14 +53,23 @@ async function singUpUser(){
                 localStorage.setItem("user", logged);
                 window.location.href = "home.html";
             }else{
-                console.log("error trying to create user !");
+                message = "Error trying to create the user!";
+                messageColor = "red";
+                showInfoMessage(message, messageColor);
+                console.log("error trying to create user !");   
             }
     
         }else{
+            message = "Some fields are empty!!";
+            messageColor = "red";
+            showInfoMessage(message, messageColor);
             console.log("some fields are empty!!");
         }
 
     }else{
+        message = "Accept terms and conditions!!";
+        messageColor = "red";
+        showInfoMessage(message, messageColor);
         console.log("Accept terms and conditions!");
     }
 
@@ -72,11 +82,30 @@ function getCurrentDate(){
     return date.toUTCString();
 }
 
-// clearData();
+function showInfoMessage(message, color) {
+    let inputs = document.querySelectorAll(".form-control");
 
-// async function test(){
-//     // let  request =  fetch("http://localhost:3000/users")
-//     // console.log(await request);
-//     // console.log(request);
-// }
-// test();
+    inputs.forEach((input) => {
+        if(input.value == ""){
+            input.classList.add("is-invalid");
+            input.style.border = "1px solid red";
+
+        }
+    });
+
+    spanMessages.classList.toggle("hidden");
+    spanMessages.style.color = color;
+    spanMessages.innerText = message;
+
+    setTimeout(() => {
+        spanMessages.classList.toggle("hidden");
+        spanMessages.innerText = "";
+
+        inputs.forEach((input) => {
+            input.classList.remove("is-invalid");
+            input.style.border = "1px solid #6A6A6D";
+        });
+
+    }, 5000);
+
+}

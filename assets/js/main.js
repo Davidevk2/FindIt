@@ -7,8 +7,7 @@ function logout(){
 }
 
 function checkLogin(){
-    console.log("revisamos al sesion");
-    let logged = localStorage.getItem("login");
+        let logged = localStorage.getItem("login");
     if(!logged){
        location.href = "login.html";
     }

@@ -66,7 +66,7 @@ async function reportLostItem() {
             document_type: type,
             missing_date: lost_date,
             owner_name: owner_name,
-            owner_doument: owner_number,
+            owner_document: owner_number,
             details: details,
             userId: reporter_id,
             reporter_name: reporter_name,
@@ -88,9 +88,16 @@ async function reportLostItem() {
         let result = await request;
 
         if (result.ok == true || (result.status == 201 || result.status == 200)) {
-            console.log("The item was reporte successfully");
-            clearData();
+            let message = "The item was reporte successfully";
+
+            setTimeout(()=>{
+                showMessages("Great!", message, "success");
+    
+                console.log("The item was reporte successfully");
+                clearData();
+            },1500);
         } else {
+            showMessages("Ooops!", "Error trying to create the report, try it later.", "error");
             console.log("error trying to create the report !");
         }
 

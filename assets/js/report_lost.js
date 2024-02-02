@@ -88,9 +88,15 @@ async function reportLostItem(){
         let result = await request;
 
         if (result.ok == true || (result.status == 201 || result.status == 200)) {
-            console.log("The item was reporte successfully");
-            clearData();
+            let message = "The item was reporte successfully";
+
+            setTimeout(()=>{
+                showMessages("Great!", message, "success");
+                console.log("The item was reporte successfully");
+                clearData();
+            },1000);
         } else {
+            showMessages("Ooops!", "Error trying to create the report, try it later..", "error");
             console.log("error trying to create the report !");
         }
 

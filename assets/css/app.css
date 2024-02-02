@@ -496,6 +496,7 @@ strong {
   border: solid 2px var(--border-color);
   border-radius: var(--border-radius-small);
   padding: 30px;
+  width: 100%;
   transition: all 0.3s ease;
   font-weight: var(--font-weight-semibold);
   font-size: 28px;
@@ -534,21 +535,9 @@ strong {
   display: none;
 }
 
-/* .custom-radio{
-  position: relative;
-  margin: auto;
-  max-width: 46%;
-  border: solid 2px var(--border-color);
-  border-radius: var(--border-radius-small);
-  padding: 30px;
-  transition: all 0.3s ease;
-  height: 100%;
-  overflow: hidden;
-} */
-
 .custom-card {
   margin: auto;
-  max-width: 45%;
+  max-width: 47%;
   border-radius: var(--border-radius-medium);
   padding: 30px;
   transition: all 0.3s ease;

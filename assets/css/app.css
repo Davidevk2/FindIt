@@ -894,6 +894,18 @@ strong {
   outline: none;
 }
 
+.required::after {
+  content: " * ";
+  /* color: #fa7000; */
+  color: #fa4700;
+}
+
+.optional::after {
+  content: " (Optional) ";
+  color: rgb(191, 191, 191);
+  font-size: 14px;
+}
+
 .form-control::placeholder {
   color: var(--border-color);
 }

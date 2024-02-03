@@ -5,6 +5,11 @@ const noOption = document.getElementById("noOption");
 const yesOption = document.getElementById("yesOption");
 const divOtherContact = document.getElementById("other-contact");
 
+const spanMessages = document.getElementById("messages");
+
+let message, messageColor;
+
+
 // Check if the radio buttons are checked
 noOption.addEventListener("change", () => {
     divOtherContact.style.display = "block";
@@ -57,7 +62,7 @@ async function reportLostItem() {
             console.log(reporter_name, reporter_contact);
 
         } else {
-            console.log("both fiels are empty!");
+            console.log("both fields are empty!");
         }
     }
 
@@ -109,6 +114,9 @@ async function reportLostItem() {
 
 
     } else {
+        message = "some fiels are empty!";
+        messageColor = "red";
+        showInfoMessage(message, messageColor)
         console.log("some fiels are empty!");
     }
 
@@ -159,7 +167,6 @@ function fillModalConfirm(data) {
                 
     `
     modalBody.innerHTML =content;
-    console.log(data);
 
     // abrir modal
     

@@ -55,6 +55,20 @@ function showInfoMessage(message, color) {
 
     }, 5000);
 
+}   
+
+
+function setProfileIcon(){
+    let divProfile = document.getElementById("navProfile");
+    let name = localStorage.getItem("name");
+    let letter = name[0].toUpperCase();
+
+    divProfile.innerText = letter;
+    divProfile.classList.add("navbar-icon");
+    divProfile.setAttribute("href", "profile.html");
+
+    console.log(divProfile);
+    
 }
 
 // Control the scroll

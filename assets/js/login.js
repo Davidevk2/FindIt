@@ -20,16 +20,16 @@ async function getDataByUser(){
         });
         
         if(userLogged.length >= 1 ){
-
             let logged = userLogged[0].id;
+            let userName = userLogged[0].name;
             let role = userLogged[0].role;
             
             localStorage.setItem("login", "True");
             localStorage.setItem("user", `${logged}`);
+            localStorage.setItem("name", `${userName}`);
             localStorage.setItem("role", `${role}`);
             location.href = "./home.html";
            
-
         }else{
             message = "Email and/or password incorrect!";
             messageColor = "red";

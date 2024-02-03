@@ -19,40 +19,41 @@
 
 <body id="top">
     <main>
-        <nav class="navbar navbar-expand-lg fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="./home.html">
-                    <img src="../assets/images/logo.svg" alt="logo">
-                </a>
-                <div class="d-lg-none ms-auto me-4">
-                    <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-lg-5 me-lg-auto">
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="./searchEngine.html">Search</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_2">Recommendations</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="./reports.html">Report</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_4">Notifications</a>
-                        </li>
-                    </ul>
-                    <div class="d-none d-lg-block">
-                        <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
-                    </div>
-                    <a class="log-btn ms-3" href="#" onclick="logout();">Logout</a>
-                </div>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="./home.html">
+                <img src="../assets/images/logo.svg" alt="logo">
+            </a>
+            <div class="d-lg-none ms-auto me-4">
+                <a href="profile.html" class="navbar-icon" id="navProfile">S</a>
             </div>
-        </nav>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-lg-5 me-lg-auto">
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="./searchEngine.html">Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="#section_2">Recommendations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="./reports.html">Report</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="#section_4">Notifications</a>
+                    </li>
+                </ul>
+                <div class="d-none d-lg-block">
+                    <a href="profile.html" class="navbar-icon" id="navProfile">S</a>
+                    <!-- <a href="#top" class="navbar-icon bi-person smoothscroll"></a> -->
+                </div>
+                <a class="log-btn ms-3" href="#" onclick="logout();">Logout</a>
+            </div>
+        </div>
+    </nav>
 
         <section class="header-section-normal d-flex justify-content-center align-items-center">
             <div class="container">

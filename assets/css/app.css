@@ -508,6 +508,57 @@ strong {
   max-width: 150px;
 }
 
+/*---------------------------------------
+    MODAL               
+  -----------------------------------------*/
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  border: 1px solid #888;
+  width: 100%;
+  border-radius: var(--border-radius-medium);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content p{
+  color: black;
+  font-size: var(--p-font-sm);
+}
+
+.form-group span{
+  display: block;
+  font-size: var(--p-font-sm);
+  color: var(--p-color-dark);
+  font-weight: var(--font-weight-medium);
+}
+
 
 /*---------------------------------------
     TOPICS              

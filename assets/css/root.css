@@ -11,6 +11,7 @@
     --dark-color: #1E1E1E;
     /* --p-color: #BCBDC0; */
     --p-color: #6A6A6D;
+    --p-color-dark: #1E1E1E;
     --border-color: #6A6A6D;
     --link-hover-color: #0E43A0;
     --footer-color: #2C2D42;
@@ -27,6 +28,7 @@
     --p-font-size: 20px;
     --menu-font-size: 16px;
     --btn-font-size: 18px;
+    --p-font-sm: 18px;
     --copyright-font-size: 16px;
   
     --border-radius-large: 100px;

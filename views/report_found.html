@@ -57,61 +57,85 @@
         <section class="header-section-normal d-flex justify-content-center align-items-center">
             <div class="container">
                 <div class="custom-card bg-white">
-                    <h1>Let's report the found item!</h1>
+                    <h3>Let's report the found item!</h3>
 
                     <form action="" class="form" name="reportForm">
-                        <div class="form-group">
-                            <label for="">Document type:</label>
-                            <select name="document_type" id="" class="form-control">
-                                <option value="cc">Cédula de Ciudadania</option>
-                                <option value="ti">Tarjeta de identidad</option>
-                                <option value="pasaporte">Pasaporte</option>
-                                <option value="lconducion">Licencia Conducción</option>
-                                <option value="carnet">Carnet</option>
-                                <option value="otro">Otro</option>
-                            </select>
-                            <input type="radio" name="" value="" id="" class="" placeholder="">
-                            <label for="">Billetera completa</label>
+                        <div class="row">
+                            <div class="col-md-6 col-12">
+                                <div class="form-group">
+                                    <label for="">Document type:</label>
+                                    <select name="document_type" id="" class="form-select">
+                                        <option value="cc">Cédula de Ciudadania</option>
+                                        <option value="ti">Tarjeta de identidad</option>
+                                        <option value="pasaporte">Pasaporte</option>
+                                        <option value="lconducion">Licencia Conducción</option>
+                                        <option value="carnet">Carnet</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                                    <div class="form-group hidden">
+                                        <input type="radio" name="" value="" id="" class="" placeholder="">
+                                        <label for="">Billetera completa</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <div class="form-group">
+                                    <label for="">Date lost:</label>
+                                    <input type="date" name="lost_date" value="" class="form-control">
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="">Date lost:</label>
-                            <input type="date" name="lost_date" value="" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="">Owner name:</label>
-                            <input type="text" name="owner_name" value="" class="form-control"
-                                placeholder="enter the owner name">
-                        </div>
-                        <div class="form-group">
-                            <label for="">Document number:</label>
-                            <input type="text" name="owner_document" value="" class="form-control"
-                                placeholder="enter the number of document-type">
+                        <div class="row">
+                            <div class="col-md-6 col-12">
+                                <div class="form-group">
+                                    <label for="">Owner name:</label>
+                                    <input type="text" name="owner_name" value="" class="form-control" placeholder="enter the owner name">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <div class="form-group">
+                                    <label for="">Document number:</label>
+                                    <input type="text" name="owner_document" value="" class="form-control"
+                                        placeholder="enter the number of document-type">
+                                </div>
+                            </div>
                         </div>
                         <div class="form-group">
                             <label for="">Descritption:</label>
                             <textarea name="description" class="form-control" id="" cols="30" rows="2"
                                 placeholder="Tell us more about.."></textarea>
                         </div>
-                        <div class="form-group">
-                            <label for="">Use the same contact information:</label>
-                            <input type="radio" name="contact" value="Same" id="yesOption"><label for="">Yes</label>
-                            <input type="radio" name="contact" value="Other" id="noOption"><label for="">No</label>
+                        <label for="">Use the same contact information:</label>
+                        <div class="form-check">
+                            <input type="radio" name="contact" class="form-check-input" value="Same" id="yesOption"><label
+                                for="">Yes</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" name="contact" class="form-check-input" value="Other" id="noOption"><label for="">No</label>
                         </div>
                         <div class="other-contact hidden" id="other-contact">
                             <div class="row">
-                                <div class="form-group">
-                                    <label for="">Email:</label>
-                                    <input type="text" name="email" value="" class="form-control" placeholder="">
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="">Email:</label>
+                                        <input type="text" name="email" value="" class="form-control" placeholder="Enter your email here">
+                                    </div>
+                    
                                 </div>
-                                <div class="form-group">
-                                    <label for="">Phone:</label>
-                                    <input type="text" name="phone" value="" class="form-control" placeholder="">
-                                    <input type="checkbox" name="SMS" value="" class="form-control"><span>contact by
-                                        SMS</span>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="">Phone:</label>
+                                        <input type="text" name="phone" value="" class="form-control" placeholder="enter your phone here">
+                                        <input type="checkbox" name="SMS" value="" class="form-check-input"><label for="">Notify by
+                                            SMS</label>
+                                    </div>
+                    
                                 </div>
                             </div>
                         </div>
-                        <button type="button" class="btn" id="btnReport">Report item!</button>
+                        <div class="col-md-12">
+                            <button type="button" class="btn btn-success" id="btnReport">Report item!</button>
+                        </div>
                     </form>
                 </div>
             </div>

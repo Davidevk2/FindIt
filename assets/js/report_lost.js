@@ -7,6 +7,11 @@ const divOtherContact = document.getElementById("other-contact");
 
 const spanMessages = document.getElementById("messages");
 
+const modal = document.getElementById("confirm-modal");
+const span = document.getElementsByClassName("close")[0];
+const btnChange = document.getElementById("btnChange");
+const btnSend = document.getElementById("btnSend");
+
 let message, messageColor;
 
 
@@ -18,11 +23,27 @@ yesOption.addEventListener("change", () => {
     divOtherContact.style.display = "none"
 })
 
+// Object tempplate to create a report 
+let lost_item = {
+    document_type: "",
+    missing_date: "",
+    owner_name: "",
+    owner_document: "",
+    details: "",
+    userId: "",
+    reporter_name: "",
+    reporter_contact: {},
+    notify_by: "SMS",
+    status: "",
+    reported_date: ""
+}
 
-btnReport.addEventListener("click", reportLostItem);
+
+// validate that the inputs are not empty 
+btnReport.addEventListener("click", checkInputsItem);
 
 // create a new  lost item in the db
-async function reportLostItem() {
+async function checkInputsItem() {
     let type = document.reportForm.document_type.value;
     let lost_date = document.reportForm.lost_date.value;
     let owner_name = document.reportForm.owner_name.value;
@@ -31,7 +52,7 @@ async function reportLostItem() {
     let contact = document.reportForm.contact.value;
     let current_date = date.toUTCString();
     let reporter_name = "";
-    let reporter_contact = { email: null, phone: null };
+    let reporter_contact = { email: "null", phone: "null" };
     let status = "Lost";
     let emailInput = document.reportForm.email.value;
     let phoneInput = document.reportForm.phone.value;
@@ -40,7 +61,6 @@ async function reportLostItem() {
     let reporter_id = localStorage.getItem("user");
 
     if (contact == "" || contact === "Same") {
-        // reporter_id =;
 
         // request to fill the user info (contact)
         let request = await fetch(`http://localhost:3000/users/${reporter_id}`);
@@ -50,11 +70,8 @@ async function reportLostItem() {
         reporter_contact.email = result.email;
         reporter_contact.phone = result.phone;
 
-        //console.log(reporter_name, reporter_contact);
-
-
     } else {
-        // ask the info by inputs
+        // ask by the infoinputs are not empty
         if (emailInput != "" || phoneInput != "") {
             reporter_name = owner_name;
             reporter_contact.email = emailInput;
@@ -62,56 +79,29 @@ async function reportLostItem() {
             console.log(reporter_name, reporter_contact);
 
         } else {
+            message = "You need to fill at least one contact info";
+            messageColor = "red";
+            showInfoMessage(message, messageColor);
             console.log("both fields are empty!");
         }
     }
 
-
     if (type != "" && lost_date != "" && owner_name != "" && owner_number != "") {
 
-
-        // asing to the object the values
-        let lost_item = {
-            document_type: type,
-            missing_date: lost_date,
-            owner_name: owner_name,
-            owner_document: owner_number,
-            details: details,
-            userId: reporter_id,
-            reporter_name: reporter_name,
-            reporter_contact: reporter_contact,
-            notify_by: "SMS",
-            status: status,
-            reported_date: current_date
-        }
-        console.log(lost_item);
+        // assing to the object the values from the inputs
+        lost_item.document_type = type;
+        lost_item.missing_date = lost_date;
+        lost_item.owner_name = owner_name;
+        lost_item.owner_document = owner_number;
+        lost_item.details = details;
+        lost_item.userId = reporter_id;
+        lost_item.reporter_name = reporter_name;
+        lost_item.reporter_contact = reporter_contact;
+        lost_item.notify_by = "SMS";
+        lost_item.status = status;
+        lost_item.reported_date = current_date;
 
         fillModalConfirm(lost_item);
-        showModal();
-
-        // make a request to save the lost item in the database
-        // let request = fetch("http://localhost:3000/lost_items",
-        //     {
-        //         method: "POST",
-        //         headers: { 'Content-Type': 'application/json' },
-        //         body: JSON.stringify(lost_item)
-        //     });
-
-        // let result = await request;
-
-        // if (result.ok == true || (result.status == 201 || result.status == 200)) {
-        //     let message = "The item was reporte successfully";
-
-        //     setTimeout(()=>{
-        //         showMessages("Great!", message, "success");
-        //         console.log("The item was reporte successfully");
-        //         clearData();
-        //     },1000);
-        // } else {
-        //     showMessages("Ooops!", "Error trying to create the report, try it later..", "error");
-        //     console.log("error trying to create the report !");
-        // }
-
 
     } else {
         message = "some fiels are empty!";
@@ -123,7 +113,39 @@ async function reportLostItem() {
 
 }
 
+// Send the information when the user confirmd
+btnSend.addEventListener("click", reportLostItem);
+
+async function reportLostItem(){
+    closeModal();
+    console.log(lost_item);
+    // make a request to save the lost item in the database
+    let request = fetch("http://localhost:3000/lost_items",
+        {
+            method: "POST",
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(lost_item)
+        });
+
+    let result = await request;
+
+    if (result.ok == true || (result.status == 201 || result.status == 200)) {
+        let message = "The item was reporte successfully";
+
+        setTimeout(()=>{
+            showMessages("Great!", message, "success");
+            console.log("The item was reporte successfully");
+            clearData();
+        },1000);
+
+    } else {
+        showMessages("Ooops!", "Error trying to create the report, try it later..", "error");
+        console.log("error trying to create the report !");
+    }
+}
+
 function fillModalConfirm(data) {
+    showModal();
     let modalBody = document.getElementById("modal-body");
     let content = `
         <p>Make sure that the information is correct to publish the item</p>
@@ -173,10 +195,8 @@ function fillModalConfirm(data) {
 }
 
 // modal confirmation 
-const modal = document.getElementById("confirm-modal");
-const span = document.getElementsByClassName("close")[0];
-
 span.onclick = closeModal;
+btnChange.onclick = closeModal;
 
 function showModal() {
     modal.style.display = "block";
@@ -194,9 +214,6 @@ window.onclick = function (event) {
 }
 
 window.addEventListener("click", closeModal());
-
-
-
 
 // Clean the data  from the form
 function clearData() {

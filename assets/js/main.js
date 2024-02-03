@@ -27,3 +27,15 @@ function showMessages(titulo, text, icon) {
 }
 
 checkLogin();
+
+window.onscroll = function () {
+    // console.log("El scrol se mueve");
+    const  navbar = document.querySelector('.navbar');
+    const  scroll = document.documentElement.scrollTop;
+    if (scroll > 300 || scroll) {
+        navbar.classList.add("is-active");
+    } else {
+        navbar.classList.remove("is-active");
+
+    }
+}

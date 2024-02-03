@@ -858,12 +858,13 @@ strong {
 
 .custom-form button,
 .custom-form .btn-custom[type="submit"] {
-  background: var(--custom-btn-bg-hover-color);
-  border: solid 2px var(--secondary-color);
+  background: var(--footer-color);
+  border: solid 2px var(--footer-color);
   border-radius: var(--border-radius-small);
   color: var(--white-color);
   font-family: var(--title-font-family);
   font-size: var(--p-font-size);
+  min-width: 120px;
   font-weight: var(--font-weight-semibold);
   transition: all 0.3s;
   margin-bottom: 0;
@@ -873,9 +874,9 @@ strong {
 .custom-form button[type="submit"]:focus,
 .custom-form .btn-custom:hover,
 .custom-form .btn-custom:focus {
-  background: var(--custom-btn-bg-color);
-  color: var(--custom-btn-bg-hover-color);
-  border: solid 2px var(--secondary-color);
+  background: var(--white-color);
+  color: var(--footer-color);
+  border: solid 2px var(--footer-color);
 }
 
 

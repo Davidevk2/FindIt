@@ -68,8 +68,6 @@ function setProfileIcon(){
     divProfile[0].innerText = letter;
     divProfile[1].innerText = letter;
 
-
-    
 }
 
 // Control the scroll

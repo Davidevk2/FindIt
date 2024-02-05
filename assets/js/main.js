@@ -8,9 +8,11 @@ function logout(){
 
 // Check if there is sesion 
 function checkLogin(){
-        let logged = localStorage.getItem("login");
+    let logged = localStorage.getItem("login");
     if(!logged){
        location.href = "login.html";
+    }else{
+        setProfileIcon();
     }
 }
 
@@ -59,15 +61,14 @@ function showInfoMessage(message, color) {
 
 
 function setProfileIcon(){
-    let divProfile = document.getElementById("navProfile");
+    let divProfile = document.querySelectorAll(".navbar-icon");
     let name = localStorage.getItem("name");
     let letter = name[0].toUpperCase();
+    
+    divProfile[0].innerText = letter;
+    divProfile[1].innerText = letter;
 
-    divProfile.innerText = letter;
-    divProfile.classList.add("navbar-icon");
-    divProfile.setAttribute("href", "profile.html");
 
-    console.log(divProfile);
     
 }
 

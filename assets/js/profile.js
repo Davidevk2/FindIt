@@ -15,12 +15,32 @@ async function getAllData(){
 
     let request = await fetch(url);
     let response = await request.json();
-
+    
     let lostItems = response.lost_items;
     let foundItems = response.found_items;
-
+    
+    fillProfileInfo(response);
     fillTables(lostItems, tbodyLost);
     fillTables(foundItems, tbodyFound);
+}
+
+function fillProfileInfo(response){
+    let infoProfile = document.querySelectorAll(".info-profile");
+    let letter = response.name[0].toUpperCase();
+    
+    infoProfile[0].innerText = letter;
+    infoProfile[1].innerText = response.name + " "+ response.last_name;
+    infoProfile[2].innerText = response.email;
+    infoProfile[3].innerText = response.last_session;
+    infoProfile[4].innerText = response.creation_date;
+    
+    let inputRequired = document.querySelectorAll(".form-required");
+    inputRequired[0].value = response.name;
+    inputRequired[1].value = response.phone;
+    inputRequired[2].value = response.email;
+    inputRequired[3].value = response.password;
+
+    
 }
 
 // Fill the tables 

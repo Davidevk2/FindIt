@@ -999,12 +999,6 @@ strong {
   margin: 10px 15px;
 }
 
-.nav-item .active{
-  width: 100%;
-  background-color: rebeccapurple;
-  background-color: var(--section-bg-color);
-}
-
 
 /*---------------------------------------
     SITE FOOTER              

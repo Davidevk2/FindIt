@@ -27,6 +27,20 @@
       "role": "User",
       "last_session": "",
       "creation_date": "Tue, 30 Jan 2024 00:49:41 GMT"
+    },
+    {
+      "id": "1dcb",
+      "identification": "",
+      "name": "Karemonbloc",
+      "last_name": "",
+      "email": "soymonbloc@gmail.com",
+      "password": "4321",
+      "phone": "4444444",
+      "gender": "",
+      "city": "",
+      "role": "User",
+      "last_session": "",
+      "creation_date": "Mon, 05 Feb 2024 21:02:00 GMT"
     }
   ],
   "lost_items": [

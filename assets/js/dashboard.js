@@ -25,6 +25,10 @@ async function loadAllData(){
     let requestFound = await fetch(urlFound);
     let dataFound = await requestFound.json();
     createFoundStadistics(dataFound);
+
+    let requestEmails = await fetch(urlMails);
+    let dataMails = await requestEmails();
+    listAllMails(dataMails);
 }
 
 loadAllData();
@@ -99,6 +103,34 @@ function createFoundStadistics(dataFound) {
     spanFound.innerText = totalItems;
 
     createChart(canvasFound, "line", types_documents, "# of found by document type", results);
+}
+
+
+function listAllMails(dataMails){
+    const tableMails = document.getElementById("tblMails");
+    const tbody = document.createElement("tbody");
+    tableMails.appendChild(tbody);
+
+    dataMails.forEach(mail, idx =>{
+        let row = `
+            <tr>
+                <td>
+                    <input type="checkbox" name="" id="">
+                </td>
+                <td>
+                    <!-- <span><i class="bi-bookmark"></i></span> -->
+                    <span><i class="bi-star"></i></span>
+                </td>
+                <td>Alexander Pierce</td>
+                <td colspan="2"><b>Check my form</b>
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, et.</span>
+                </td>
+                <td>2 days ago</td>
+            </tr>
+        `
+
+    })
+
 }
 
 

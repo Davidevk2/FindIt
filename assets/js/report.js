@@ -66,7 +66,7 @@ function fillTables(data, tbTable) {
         row.appendChild(statusCell);
 
         let options = document.createElement("td");
-        options.innerHTML = `<button class="btn" id="update">Update status</button>`;
+        options.innerHTML = `<button class="btn btn-sm btn-success" id="update">Update status</button>`;
         row.appendChild(options);
 
     });

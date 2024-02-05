@@ -617,6 +617,14 @@ strong {
   height: 100%;
 }
 
+.custom-card-lg{
+  margin: 20px auto;
+  transition: all 0. ease;
+  max-width: 100%;
+  padding: 20px;
+  border-radius: var(--border-radius-small);
+}
+
 .custom-block {
   border-radius: var(--border-radius-medium);
   position: relative;

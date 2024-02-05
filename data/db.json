@@ -27,6 +27,20 @@
       "role": "User",
       "last_session": "",
       "creation_date": "Tue, 30 Jan 2024 00:49:41 GMT"
+    },
+    {
+      "id": "1dcb",
+      "identification": "",
+      "name": "Karemonbloc",
+      "last_name": "",
+      "email": "soymonbloc@gmail.com",
+      "password": "4321",
+      "phone": "4444444",
+      "gender": "Female",
+      "city": "",
+      "role": "User",
+      "last_session": "",
+      "creation_date": "Mon, 05 Feb 2024 21:02:00 GMT"
     }
   ],
   "lost_items": [
@@ -80,6 +94,23 @@
       "notify_by": "SMS",
       "status": "Lost",
       "reported_date": "Fri, 02 Feb 2024 16:35:15 GMT"
+    },
+    {
+      "id": "da40",
+      "document_type": "lconducion",
+      "missing_date": "2024-02-02",
+      "owner_name": "David Herrera ",
+      "owner_document": "10000856",
+      "details": "Licencia y otros documentos",
+      "userId": "c4df",
+      "reporter_name": "david ",
+      "reporter_contact": {
+        "email": "david@gmail.com",
+        "phone": "323342"
+      },
+      "notify_by": "SMS",
+      "status": "Lost",
+      "reported_date": "Sat, 03 Feb 2024 16:46:09 GMT"
     }
   ],
   "found_items": [
@@ -150,6 +181,23 @@
       "notify_by": "SMS",
       "status": "Lost",
       "reported_date": "Fri, 02 Feb 2024 16:29:25 GMT"
+    },
+    {
+      "id": "e033",
+      "document_type": "pasaporte",
+      "missing_date": "2024-02-02",
+      "owner_name": "David",
+      "owner_document": "123230942",
+      "details": "Some",
+      "userId": "c4df",
+      "reporter_name": "david ",
+      "reporter_contact": {
+        "email": "david@gmail.com",
+        "phone": "323342"
+      },
+      "notify_by": "SMS",
+      "status": "Found",
+      "reported_date": "Sat, 03 Feb 2024 17:12:25 GMT"
     }
   ],
   "messages": []

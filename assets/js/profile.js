@@ -10,23 +10,41 @@ window.addEventListener("DOMContentLoaded",getAllData())
 
 async function getAllData(){
     let userId = localStorage.getItem("user");
-    console.log(userId);
 
     let url = `http://localhost:3000/users/${userId}/?_embed=lost_items&_embed=found_items`;
 
     let request = await fetch(url);
     let response = await request.json();
-
+    
     let lostItems = response.lost_items;
     let foundItems = response.found_items;
-
+    
+    fillProfileInfo(response);
     fillTables(lostItems, tbodyLost);
     fillTables(foundItems, tbodyFound);
 }
 
+function fillProfileInfo(response){
+    let infoProfile = document.querySelectorAll(".info-profile");
+    let letter = response.name[0].toUpperCase();
+    
+    infoProfile[0].innerText = letter;
+    infoProfile[1].innerText = response.name + " "+ response.last_name;
+    infoProfile[2].innerText = response.email;
+    infoProfile[3].innerText = response.last_session;
+    infoProfile[4].innerText = response.creation_date;
+    
+    let inputRequired = document.querySelectorAll(".form-required");
+    inputRequired[0].value = response.name;
+    inputRequired[1].value = response.phone;
+    inputRequired[2].value = response.email;
+    inputRequired[3].value = response.password;
+
+    
+}
+
 // Fill the tables 
 function fillTables(data, tbTable) {
-    console.log(data.length);
     if(data.length < 1){
         let row = document.createElement("tr");
 
@@ -68,7 +86,7 @@ function fillTables(data, tbTable) {
         row.appendChild(statusCell);
 
         let options = document.createElement("td");
-        options.innerHTML = `<button class="btn" id="update">Update status</button>`;
+        options.innerHTML = `<button class="btn btn-sm btn-success" id="update">Update status</button>`;
         row.appendChild(options);
 
     });

@@ -508,6 +508,57 @@ strong {
   max-width: 150px;
 }
 
+/*---------------------------------------
+    MODAL               
+  -----------------------------------------*/
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  border: 1px solid #888;
+  width: 100%;
+  border-radius: var(--border-radius-medium);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content p{
+  color: black;
+  font-size: var(--p-font-sm);
+}
+
+.form-group span{
+  display: block;
+  font-size: var(--p-font-sm);
+  color: var(--p-color-dark);
+  font-weight: var(--font-weight-medium);
+}
+
 
 /*---------------------------------------
     TOPICS              
@@ -566,6 +617,14 @@ strong {
   height: 100%;
 }
 
+.custom-card-lg{
+  margin: 20px auto;
+  transition: all 0. ease;
+  max-width: 100%;
+  padding: 20px;
+  border-radius: var(--border-radius-small);
+}
+
 .custom-block {
   border-radius: var(--border-radius-medium);
   position: relative;
@@ -604,7 +663,7 @@ strong {
 
 .custom-block-overlay {
   height: 100%;
-  min-height: 350px;
+  min-height: 550px;
   padding: 0;
 }
 
@@ -690,7 +749,7 @@ strong {
 
 .timeline-container .vertical-scrollable-timeline .list-progress {
   width: 8px;
-  height: 87%;
+  height: 100%;
   background-color: var(--primary-color);
   position: absolute;
   left: 52px;
@@ -832,6 +891,12 @@ strong {
 /*---------------------------------------
     CUSTOM FORM               
   -----------------------------------------*/
+.form-group .form-select,.form-control{
+  margin-bottom: 10px;
+  border-color: var(--border-color);
+  outline: none;
+}
+
 .custom-form .form-control {
   border-radius: var(--border-radius-small);
   border-color: var(--border-color);
@@ -841,6 +906,18 @@ strong {
   padding-bottom: 13px;
   padding-left: 20px;
   outline: none;
+}
+
+.required::after {
+  content: " * ";
+  /* color: #fa7000; */
+  color: #fa4700;
+}
+
+.optional::after {
+  content: " (Optional) ";
+  color: rgb(191, 191, 191);
+  font-size: 14px;
 }
 
 .form-control::placeholder {
@@ -877,6 +954,49 @@ strong {
   background: var(--white-color);
   color: var(--footer-color);
   border: solid 2px var(--footer-color);
+}
+
+/*---------------------------------------
+    SITE PROFILE              
+  -----------------------------------------*/
+.content-info{
+  padding: 15px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.content-info .profile-user{
+  color: var(--p-color-dark);
+  width: 100%;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  font-size: var(--h1-font-size);
+}
+.content-info .info-profile{
+  display: block;
+}
+
+.content-info .info-letter{
+  width: 60%;
+  min-height: 80px;
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  border-radius: 50%;
+}
+
+.content-info h4{
+    text-transform: capitalize;
+}
+
+.tab-content{
+  padding: 15px;
+}
+
+.nav{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: 10px 15px;
 }
 
 

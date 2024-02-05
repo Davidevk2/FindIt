@@ -883,6 +883,12 @@ strong {
 /*---------------------------------------
     CUSTOM FORM               
   -----------------------------------------*/
+.form-group .form-select,.form-control{
+  margin-bottom: 10px;
+  border-color: var(--border-color);
+  outline: none;
+}
+
 .custom-form .form-control {
   border-radius: var(--border-radius-small);
   border-color: var(--border-color);

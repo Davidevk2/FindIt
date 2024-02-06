@@ -706,7 +706,7 @@ strong {
 }
 
 .bg-design {
-  background-color: #00B0FF;
+  background-color: var(--primary-color);
 }
 
 .bg-graphic {
@@ -718,7 +718,7 @@ strong {
 }
 
 .bg-finance {
-  background-color: #536DFE;
+  background-color: var(--secondary-color);
 }
 
 .bg-music {
@@ -966,27 +966,24 @@ strong {
 
 .content-info{
   padding: 15px;
-  border-bottom: 1px solid var(--border-color);
+  /* border-bottom: 1px solid var(--border-color); */
 }
 
-.content-info .profile-user{
+.content-info .profile-user {
   color: var(--p-color-dark);
-  width: 100%;
-  width: 250px;
   display: flex;
   justify-content: center;
   font-size: var(--h1-font-size);
 }
-.content-info .info-profile{
-  display: block;
-}
 
-.content-info .info-letter{
-  width: 60%;
-  min-height: 80px;
+.content-info .info-letter {
+  width: 150px;
+  height: 150px;
   border: 1px solid var(--border-color);
-  padding: 20px;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .content-info h4{

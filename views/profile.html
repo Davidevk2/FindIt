@@ -63,8 +63,8 @@
                     <div class="col-md-3">
                         <div class="card text-center">
                             <div class="content-info">
-                                <div class="profile-user">
-                                    <span class=" info-profile info-letter">D</span>
+                                <div class="profile-user mb-4">
+                                    <span class=" info-profile info-letter"></span>
                                 </div>
                                 <div class="profile-content">
                                     <h4 class="info-profile"id="info-name">Name</h4>
@@ -165,23 +165,26 @@
                                 <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                                     <div class="section lost-items table-responsive">
                                         <h3>List of reported items</h3>
-                                        <table class="table" id="lostTable">
-                                            <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th>Report Id</th>
-                                                    <th>Document</th>
-                                                    <th>Missing Date</th>
-                                                    <!-- <th></th> -->
-                                                    <th>Reported date</th>
-                                                    <th>Status</th>
-                                                    <th>Change status</th>
-                                                </tr>
-                                            </thead>
-                                        </table>
+                                        <div class="table-responsive">
+                                            <table class="table" id="lostTable">
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Report Id</th>
+                                                        <th>Document</th>
+                                                        <th>Missing Date</th>
+                                                        <!-- <th></th> -->
+                                                        <th>Reported date</th>
+                                                        <th>Status</th>
+                                                        <th>Change status</th>
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                        </div>
                                     </div>
                                     <div class="section found-items table-responsive">
                                         <h3>Lists of items found</h2>
+                                        <div class="table-responsive">
                                             <table class="table" id="foundTable">
                                                 <thead>
                                                     <tr>
@@ -198,6 +201,7 @@
                                                     </tr>
                                                 </thead>
                                             </table>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

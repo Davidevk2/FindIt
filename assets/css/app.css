@@ -961,7 +961,6 @@ strong {
   -----------------------------------------*/
 .card{
   border-radius: var(--border-radius-medium);
-  padding: 3%;
 }
 
 .content-info{
@@ -987,7 +986,11 @@ strong {
 }
 
 .content-info h4{
-    text-transform: capitalize;
+  text-transform: capitalize;
+}
+
+.profile-content .info-profile{
+  display: block;
 }
 
 .tab-content{
@@ -999,6 +1002,12 @@ strong {
   text-align: center;
   justify-content: center;
   margin: 10px 15px;
+}
+
+.tab-horizontal .nav{
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
 
 

@@ -200,5 +200,24 @@
       "reported_date": "Sat, 03 Feb 2024 17:12:25 GMT"
     }
   ],
-  "messages": []
+  "messages": [],
+  "mails": [
+    {
+      "id": "8cb0",
+      "name": "",
+      "email": "correo@correo.com",
+      "subject": "some troubles in the page",
+      "message": "Some to say ",
+      "send_date": "Tue, 06 Feb 2024 02:16:37 GMT"
+    },
+    {
+      "id": "abc1",
+      "name": "",
+      "email": "juanjose@gmail.com",
+      "subject": "some to say ",
+      "message": "some to say here ",
+      "send_date": 2024
+    }
+    
+  ]
 }

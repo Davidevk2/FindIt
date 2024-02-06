@@ -137,3 +137,97 @@ window.onscroll = function () {
 
     }
 }
+
+
+const btnSend = document.getElementById("btnSend");
+console.log(btnSend);
+
+btnSend.addEventListener("click", sendMail);
+async function sendMail(){
+    let date = new Date();
+
+    let inputName = document.mailsForm.name.value;
+    let inputEmail = document.mailsForm.email.value;
+    let inputSubject = document.mailsForm.subject.value;
+    let inputMessage = document.mailsForm.message.value;
+    console.log(inputEmail, inputEmail, inputMessage, inputSubject);
+    let message = "";
+    let messageColor = "";
+
+    if(inputName != " " && inputEmail != " " && inputSubject != " " && inputMessage != " "){
+
+        let mailData = {
+            name : inputName,
+            email:inputEmail,
+            subject: inputSubject,
+            message: inputMessage,
+            send_date : date.getFullYear()
+        }
+
+        console.log(mailData);
+
+        let request = await fetch("http://localhost:3000/mails/", {method: "POST", headers:{
+            "Content-Type":"application/json"
+        },
+    body: JSON.stringify(mailData)});
+    let response = await request;
+    console.log(response);
+
+        if (response.ok == true || (response.status == 201 || response.status == 200)) {
+            console.log("the email was send successfully");
+            message = "the email was send successfully";
+            messageColor = "green";
+            showInfoMessage(message, messageColor);
+            clearData();
+            
+        } else {
+            message = "Error trying to send the email!";
+            messageColor = "red";
+            showInfoMessage(message, messageColor);
+            console.log("Error trying to send the email!");
+        }
+
+    
+    }else{
+        let message = "Some inputs are empty";
+        messageColor = "red";
+        showInfoMessage(message, messageColor);
+    }
+
+}
+
+
+function showInfoMessage(message, color) {
+    let inputs = document.querySelectorAll(".form-control");
+    let spanMessages = document.getElementById("messages");
+
+    inputs.forEach((input) => {
+        if (input.value == "") {
+            input.classList.add("is-invalid");
+            input.style.border = "1px solid red";
+
+        }
+    });
+
+    spanMessages.classList.toggle("hidden");
+    spanMessages.style.color = color;
+    spanMessages.innerText = message;
+
+    setTimeout(() => {
+        spanMessages.classList.toggle("hidden");
+        spanMessages.innerText = "";
+
+        inputs.forEach((input) => {
+            input.classList.remove("is-invalid");
+            input.style.border = "1px solid #6A6A6D";
+        });
+
+    }, 5000);
+
+}   
+
+
+function clearData(){
+    let form = document.mailsForm;
+    form.reset();
+}

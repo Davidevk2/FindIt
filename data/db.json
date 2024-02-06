@@ -9,11 +9,7 @@
       "password": "1234",
       "phone": "3243",
       "gender": "Male",
-<<<<<<< HEAD
-      "city": "",
-=======
       "city": "Medellín ",
->>>>>>> develop
       "role": "User",
       "last_session": "",
       "creation_date": "Tue, 30 Jan 2024 00:39:12 GMT"
@@ -26,13 +22,8 @@
       "email": "david@gmail.com",
       "password": "1234",
       "phone": "323342",
-<<<<<<< HEAD
       "gender": "Male",
       "city": "",
-=======
-      "gender": "",
-      "city": "Medellín",
->>>>>>> develop
       "role": "User",
       "last_session": "",
       "creation_date": "Tue, 30 Jan 2024 00:49:41 GMT"

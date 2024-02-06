@@ -12,6 +12,7 @@ async function loadAllData(){
     let urlUsers = "http://localhost:3000/users";
     let urlLost = "http://localhost:3000/lost_items";
     let urlFound = "http://localhost:3000/found_items";
+    let urlMails= "http://localhost:3000/mails";
 
     // request to the users endpoint
     let requestUsers = await fetch(urlUsers);
@@ -27,7 +28,7 @@ async function loadAllData(){
     createFoundStadistics(dataFound);
 
     let requestEmails = await fetch(urlMails);
-    let dataMails = await requestEmails();
+    let dataMails = await requestEmails.json();
     listAllMails(dataMails);
 }
 
@@ -107,13 +108,14 @@ function createFoundStadistics(dataFound) {
 
 
 function listAllMails(dataMails){
-    const tableMails = document.getElementById("tblMails");
+    let tableMails = document.getElementById("tblMails");
     const tbody = document.createElement("tbody");
-    tableMails.appendChild(tbody);
+        tableMails.appendChild(tbody);
 
-    dataMails.forEach(mail, idx =>{
-        let row = `
-            <tr>
+    dataMails.forEach(mail =>{
+        console.log(mail.email);
+        let row = document.createElement("tr");
+        let Content = `
                 <td>
                     <input type="checkbox" name="" id="">
                 </td>
@@ -121,19 +123,17 @@ function listAllMails(dataMails){
                     <!-- <span><i class="bi-bookmark"></i></span> -->
                     <span><i class="bi-star"></i></span>
                 </td>
-                <td>Alexander Pierce</td>
-                <td colspan="2"><b>Check my form</b>
-                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, et.</span>
+                <td>${mail.name}</td>
+                <td colspan="2"><b>${mail.subject}</b>
+                    <!-- <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, et.</span> -->
                 </td>
-                <td>2 days ago</td>
-            </tr>
-        `
-
+                <td>${mail.send_date}</td>
+        `;
+        row.innerHTML = Content;
+        tbody.appendChild(row);
     })
 
 }
-
-
 
 
 

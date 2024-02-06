@@ -959,6 +959,11 @@ strong {
 /*---------------------------------------
     SITE PROFILE              
   -----------------------------------------*/
+.card{
+  border-radius: var(--border-radius-medium);
+  padding: 3%;
+}
+
 .content-info{
   padding: 15px;
   border-bottom: 1px solid var(--border-color);

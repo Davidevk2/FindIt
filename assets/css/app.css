@@ -706,7 +706,7 @@ strong {
 }
 
 .bg-design {
-  background-color: #00B0FF;
+  background-color: var(--primary-color);
 }
 
 .bg-graphic {
@@ -718,7 +718,7 @@ strong {
 }
 
 .bg-finance {
-  background-color: #536DFE;
+  background-color: var(--secondary-color);
 }
 
 .bg-music {

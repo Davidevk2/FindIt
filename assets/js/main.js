@@ -33,6 +33,7 @@ function showMessages(titulo, text, icon) {
 // Show messages when the required inputs are empty
 function showInfoMessage(message, color) {
     let inputs = document.querySelectorAll(".form-required");
+    let spanMessages = document.getElementById("messages");
 
     inputs.forEach((input) => {
         if (input.value == "") {

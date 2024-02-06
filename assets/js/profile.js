@@ -1,3 +1,6 @@
+const btnUpdate = document.getElementById("btnUpdate");
+console.log(btnUpdate);
+
 const lostTable = document.getElementById("lostTable");
 const tbodyLost = document.createElement("tbody");
 lostTable.appendChild(tbodyLost);
@@ -34,13 +37,14 @@ function fillProfileInfo(response){
     infoProfile[3].innerText = response.last_session;
     infoProfile[4].innerText = response.creation_date;
     
-    let inputRequired = document.querySelectorAll(".form-required");
+    let inputRequired = document.querySelectorAll(".form-control");
     inputRequired[0].value = response.name;
-    inputRequired[1].value = response.phone;
-    inputRequired[2].value = response.email;
-    inputRequired[3].value = response.password;
-
-    
+    inputRequired[1].value = response.last_name;
+    inputRequired[2].value = response.identification;
+    inputRequired[3].value = response.phone;
+    inputRequired[4].value = response.email;
+    inputRequired[5].value = response.password;
+    inputRequired[6].value = response.city;
 }
 
 // Fill the tables 
@@ -92,6 +96,66 @@ function fillTables(data, tbTable) {
     });
 
     }
+}
+
+btnUpdate.addEventListener("click", updateUser);
+
+async function updateUser(){
+    let userId = localStorage.getItem("user");
+
+    let inputIdenti = document.updateForm.identification.value;
+    let inputName = document.updateForm.name.value;
+    let inputLName = document.updateForm.lastName.value;
+    let inputEmail = document.updateForm.email.value;
+    let inputPass = document.updateForm.password.value;
+    let inputPhone = document.updateForm.phone.value;
+    let inputGender =  document.updateForm.gender.value;
+    let inputCity   = document.updateForm.city.value;
+
+    if(inputName != "" && inputEmail != "" && inputPass != "" && inputPhone != ""){
+
+        let userInfo = {
+            identification: inputIdenti,
+            name: inputName,
+            last_name: inputLName,
+            email: inputEmail,
+            password: inputPass,
+            phone: inputPhone,
+            gender: inputGender,
+            city: inputCity,
+        }
+
+
+        console.log(userInfo);
+
+        let request = await fetch(`http://localhost:3000/users/${userId}`, 
+            {method : "PATCH", headers: {
+                "Content-type":"application/json"
+            },
+            body: JSON.stringify(userInfo)
+            })
+
+        let response = await request;
+        if (response.ok == true || (response.status == 201 || response.status == 200)) {
+            console.log("The user was update successfully");
+            showMessages("Great", "the user was updated successfully", "success",true);
+
+            setTimeout(()=>{
+                location.href = "";
+s            },2000);
+        } else {
+            message = "Error trying to edit the user!";
+            messageColor = "red";
+            showInfoMessage(message, messageColor);
+            console.log("error trying to create user !");
+        }
+
+        console.log(response);
+    }else{
+        let message = "Some required inputs are empty!"
+        showInfoMessage(message, "red");
+    }
+
 }
 
 

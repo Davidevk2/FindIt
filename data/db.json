@@ -4,26 +4,35 @@
       "id": "5b41",
       "identification": "",
       "name": "Kenneth",
-      "last_name": "",
+      "last_name": "Mesa",
       "email": "Kenneth@gmail.com",
       "password": "1234",
       "phone": "3243",
       "gender": "Male",
+<<<<<<< HEAD
       "city": "",
+=======
+      "city": "Medellín ",
+>>>>>>> develop
       "role": "User",
       "last_session": "",
       "creation_date": "Tue, 30 Jan 2024 00:39:12 GMT"
     },
     {
       "id": "c4df",
-      "identification": "",
-      "name": "david ",
-      "last_name": "",
+      "identification": "100008",
+      "name": "David ",
+      "last_name": "Herrera",
       "email": "david@gmail.com",
       "password": "1234",
       "phone": "323342",
+<<<<<<< HEAD
       "gender": "Male",
       "city": "",
+=======
+      "gender": "",
+      "city": "Medellín",
+>>>>>>> develop
       "role": "User",
       "last_session": "",
       "creation_date": "Tue, 30 Jan 2024 00:49:41 GMT"
@@ -200,5 +209,23 @@
       "reported_date": "Sat, 03 Feb 2024 17:12:25 GMT"
     }
   ],
-  "messages": []
+  "messages": [],
+  "mails": [
+    {
+      "id": "8cb0",
+      "name": "",
+      "email": "correo@correo.com",
+      "subject": "some troubles in the page",
+      "message": "Some to say ",
+      "send_date": "Tue, 06 Feb 2024 02:16:37 GMT"
+    },
+    {
+      "id": "abc1",
+      "name": "",
+      "email": "juanjose@gmail.com",
+      "subject": "some to say ",
+      "message": "some to say here ",
+      "send_date": 2024
+    }
+  ]
 }

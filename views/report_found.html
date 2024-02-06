@@ -19,41 +19,41 @@
 
 <body id="top">
     <main>
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="./home.html">
-                <img src="../assets/images/logo.svg" alt="logo">
-            </a>
-            <div class="d-lg-none ms-auto me-4">
-                <a href="profile.html" class="navbar-icon" id="navProfile">S</a>
-            </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-lg-5 me-lg-auto">
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="./home.html">Report</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="./searchEngine.html">Search</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_2">Recommendations</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_4">Notifications</a>
-                    </li>
-                </ul>
-                <div class="d-none d-lg-block">
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="./home.html">
+                    <img src="../assets/images/logo.svg" alt="logo">
+                </a>
+                <div class="d-lg-none ms-auto me-4">
                     <a href="profile.html" class="navbar-icon" id="navProfile">S</a>
-                    <!-- <a href="#top" class="navbar-icon bi-person smoothscroll"></a> -->
                 </div>
-                <a class="log-btn ms-3" href="#" onclick="logout();">Logout</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-lg-5 me-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="./home.html">Report</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="./searchEngine.html">Search</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_2">Recommendations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_4">Notifications</a>
+                        </li>
+                    </ul>
+                    <div class="d-none d-lg-block">
+                        <a href="profile.html" class="navbar-icon" id="navProfile">S</a>
+                        <!-- <a href="#top" class="navbar-icon bi-person smoothscroll"></a> -->
+                    </div>
+                    <a class="log-btn ms-3" href="#" onclick="logout();">Logout</a>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
         <section class="header-section-normal d-flex justify-content-center align-items-center">
             <div class="container">
@@ -68,7 +68,8 @@
                                         <div class="col-md-6 col-12">
                                             <div class="form-group">
                                                 <label for="document_type" class="required">Document type:</label>
-                                                <select name="document_type" id="document_type" class="form-select form-required">
+                                                <select name="document_type" id="document_type"
+                                                    class="form-select form-required">
                                                     <option value="cc">Cédula de Ciudadania</option>
                                                     <option value="ti">Tarjeta de identidad</option>
                                                     <option value="pasaporte">Pasaporte</option>
@@ -85,7 +86,8 @@
                                         <div class="col-md-6 col-12">
                                             <div class="form-group">
                                                 <label for="lost_date" class="required">Lost date:</label>
-                                                <input type="date" name="lost_date" id="lost_date" value="" class="form-control form-required">
+                                                <input type="date" name="lost_date" id="lost_date" value=""
+                                                    class="form-control form-required">
                                             </div>
                                         </div>
                                     </div>
@@ -93,56 +95,62 @@
                                         <div class="col-md-6 col-12">
                                             <div class="form-group">
                                                 <label for="owner_name" class="required">Owner name:</label>
-                                                <input type="text" name="owner_name" value="" class="form-control form-required" id="owner_name"
+                                                <input type="text" name="owner_name" value=""
+                                                    class="form-control form-required" id="owner_name"
                                                     placeholder="enter the owner name">
                                             </div>
                                         </div>
                                         <div class="col-md-6 col-12">
                                             <div class="form-group">
                                                 <label for="owner_document" class="required">Document number:</label>
-                                                <input type="text" name="owner_document" value="" class="form-control form-required" id="owner_document"
+                                                <input type="text" name="owner_document" value=""
+                                                    class="form-control form-required" id="owner_document"
                                                     placeholder="enter the number of document">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="description" class="optional">Descritption:</label>
-                                        <textarea name="description" class="form-control" id="description" cols="30" rows="2"
-                                            placeholder="Tell us more about.."></textarea>
+                                        <textarea name="description" class="form-control" id="description" cols="30"
+                                            rows="2" placeholder="Tell us more about.."></textarea>
                                     </div>
                                     <label for="">Use the same contact information:</label>
                                     <div class="form-check">
-                                        <input type="radio" name="contact" class="form-check-input" value="Same" id="yesOption"><label
-                                            for="yesOption">Yes</label>
+                                        <input type="radio" name="contact" class="form-check-input" value="Same"
+                                            id="yesOption"><label for="yesOption">Yes</label>
                                     </div>
                                     <div class="form-check">
-                                        <input type="radio" name="contact" class="form-check-input" value="Other" id="noOption"><label
-                                            for="noOption">No</label>
+                                        <input type="radio" name="contact" class="form-check-input" value="Other"
+                                            id="noOption"><label for="noOption">No</label>
                                     </div>
                                     <div class="other-contact hidden" id="other-contact">
                                         <div class="row">
                                             <div class="col-md-6 col-12">
                                                 <div class="form-group">
                                                     <label for="input_email">Email:</label>
-                                                    <input type="text" name="email" value="" class="form-control form-required" id="input_email"
+                                                    <input type="text" name="email" value=""
+                                                        class="form-control form-required" id="input_email"
                                                         placeholder="Enter your email here">
                                                 </div>
-                                
+
                                             </div>
                                             <div class="col-md-6 col-12">
                                                 <div class="form-group">
                                                     <label for="input_phone">Phone:</label>
-                                                    <input type="text" name="phone" value="" class="form-control form-required" id="input_phone"
+                                                    <input type="text" name="phone" value=""
+                                                        class="form-control form-required" id="input_phone"
                                                         placeholder="enter your phone here">
-                                                    <input type="checkbox" name="SMS" value="" class="form-check-input"><label for="">Notify by
+                                                    <input type="checkbox" name="SMS" value=""
+                                                        class="form-check-input"><label for="">Notify by
                                                         SMS</label>
                                                 </div>
-                                
+
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-12">
-                                        <button type="button" class="btn btn-success" id="btnReport">Report item!</button>
+                                    <div class="col-md-12 custom-form mt-2 mb-2">
+                                        <button type="button" class="btn btn-custom" id="btnReport">Report
+                                            item!</button>
                                     </div>
                                 </form>
                             </div>
@@ -151,8 +159,11 @@
                         <div class="col-md-6">
                             <div class="middle-steps">
                                 <h4>Steps or Recommendationss</h4>
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, ad sint! Tempora quaerat harum atque eum consequatur sapiente, molestias eius a dolorum odit ducimus unde dolores aut saepe beatae fugit reiciendis totam labore obcaecati sunt.</p>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum illo assumenda, tempora eius natus animi accusamus explicabo porro aliquid in.</p>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, ad sint! Tempora
+                                    quaerat harum atque eum consequatur sapiente, molestias eius a dolorum odit ducimus
+                                    unde dolores aut saepe beatae fugit reiciendis totam labore obcaecati sunt.</p>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum illo assumenda,
+                                    tempora eius natus animi accusamus explicabo porro aliquid in.</p>
                             </div>
                         </div>
                     </div>
@@ -170,9 +181,9 @@
                     <span class="close">&times;</span>
                 </div>
                 <div class="modal-body" id="modal-body">
-    
+
                 </div>
-    
+
                 <div class="modal-footer">
                     <div class="row">
                         <div class="col-md-6">

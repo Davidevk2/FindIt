@@ -63,8 +63,8 @@
                     <div class="col-md-3">
                         <div class="card text-center">
                             <div class="content-info">
-                                <div class="profile-user">
-                                    <span class=" info-profile info-letter">D</span>
+                                <div class="profile-user mb-4">
+                                    <span class="info-profile info-letter"></span>
                                 </div>
                                 <div class="profile-content">
                                     <h4 class="info-profile"id="info-name">Name</h4>
@@ -91,18 +91,19 @@
                             <div class="tab-content" id="pills-tabContent">
                                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                                     <h4>My information</h4>
-                                    <form action="" class="form-uddate">
+                                    <span class="messages hidden" id="messages"></span>
+                                    <form action="" class="form-uddate" name="updateForm">
                                         <div class="row">
                                             <div class="col-md-6 col-12">
                                                 <div class="form-group">
                                                     <label for="" class="required">Name:</label>
-                                                    <input type="text" name="" class="form-control form-required" placeholder="your name here">
+                                                    <input type="text" name="name" class="form-control form-required" placeholder="your name here">
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-12">
                                                 <div class="form-group">
                                                     <label for="">Last name:</label>
-                                                    <input type="text" name="" class="form-control" placeholder="your last name here">
+                                                    <input type="text" name="lastName" class="form-control" placeholder="your last name here">
                                                 </div>
                                             </div>
                                         </div>
@@ -110,13 +111,13 @@
                                             <div class="col-md-6 col-12">
                                                 <div class="form-group">
                                                     <label for="">Identification:</label>
-                                                    <input type="text" name="" value="" class="form-control" placeholder="your identification here">
+                                                    <input type="text" name="identification" value="" class="form-control" placeholder="your identification here">
                                                 </div>
                                             </div>
                                             <div class="col-md-6 col-12">
                                                 <div class="form-group">
                                                     <label for="" class="required">Phone:</label>
-                                                    <input type="text" name="" value="" class="form-control form-required" placeholder="your phone here">
+                                                    <input type="text" name="phone" value="" class="form-control form-required" placeholder="your phone here">
                                                 </div>
                                             </div>
                                         </div>
@@ -124,13 +125,13 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="" class="required">Email:</label>
-                                                    <input type="text" name="" value="" class="form-control form-required" placeholder="enter your email here">
+                                                    <input type="text" name="email" value="" class="form-control form-required" placeholder="enter your email here">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="" class="required">Password:</label>
-                                                    <input type="text" name="" value="" class="form-control form-required" placeholder="enter your password here">
+                                                    <input type="text" name="password" value="" class="form-control form-required" placeholder="enter your password here">
                                                 </div>
                                             </div>
                                         </div>
@@ -138,7 +139,8 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="">Gender:</label>
-                                                    <select name="" id="" class="form-select">
+                                                    <select name="gender" id="" class="form-select">
+                                                        <option value="">Select</option>
                                                         <option value="Female">Female</option>
                                                         <option value="Male">Male</option>
                                                         <option value="Other">Other</option>
@@ -148,54 +150,73 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="">City:</label>
-                                                    <input type="text" name="" value="" class="form-control" placeholder="enter the city here">
+                                                    <input type="text" name="city" value="" class="form-control" placeholder="enter the city here">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <button type="button" class="btn btn-success">Update information</button>
+                                                <button type="button" class="btn btn-success" id="btnUpdate">Update information</button>
                                             </div>
                                             <div class="col-md-6"></div>
                                         </div>
                                     </form>
                                 </div>
                                 <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                                    <div class="section lost-items">
-                                        <h3>List of reported items</h3>
-                                        <table class="table" id="lostTable">
-                                            <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th>Report Id</th>
-                                                    <th>Document</th>
-                                                    <th>Missing Date</th>
-                                                    <!-- <th></th> -->
-                                                    <th>Reported date</th>
-                                                    <th>Status</th>
-                                                    <th>Change status</th>
-                                                </tr>
-                                            </thead>
-                                        </table>
+                                    <div class="tab-horizontal">
+                                        <nav class="nav nav-tabs" id="nav-tab" role="tablist">
+                                            <button class="nav-link active" id="nav-lost-tab" data-bs-toggle="tab" data-bs-target="#nav-lost" type="button"
+                                                role="tab" aria-controls="nav-lost" aria-selected="true">Lost items</button>
+                                            <button class="nav-link" id="nav-found-tab" data-bs-toggle="tab" data-bs-target="#nav-found" type="button"
+                                                role="tab" aria-controls="nav-found" aria-selected="false">Found items</button> 
+                                        </nav>
                                     </div>
-                                    <div class="section found-items">
-                                        <h3>Lists of items found</h2>
-                                            <table class="table" id="foundTable">
-                                                <thead>
-                                                    <tr>
-                                                        <th>#</th>
-                                                        <th>Report Id</th>
-                                                        <th>Document</th>
-                                                        <th>Missing Date</th>
-                                                        <!-- <th></th>
-                                                                    <th></th> -->
-                                                        <th>Reported date</th>
-                                                        <th>Status</th>
-                                                        <th>Change status</th>
-                                    
-                                                    </tr>
-                                                </thead>
-                                            </table>
+                                
+                                    <div class="tab-content" id="nav-tabContent">
+                                        <div class="tab-pane fade show active" id="nav-lost" role="tabpanel" aria-labelledby="nav-lost-tab">
+                                            <div class="section lost-items table-responsive">
+                                                <h4>List of lost items</h3>
+                                                <div class="table-responsive">
+                                                    <table class="table" id="lostTable">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>#</th>
+                                                                <th>Report Id</th>
+                                                                <th>Document</th>
+                                                                <th>Missing Date</th>
+                                                                <!-- <th></th> -->
+                                                                <th>Reported date</th>
+                                                                <th>Status</th>
+                                                                <th>Change status</th>
+                                                            </tr>
+                                                        </thead>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="nav-found" role="tabpanel" aria-labelledby="nav-found-tab">
+                                            <div class="section found-items table-responsive">
+                                                <h4>List of found items</h2>
+                                                <div class="table-responsive">
+                                                    <table class="table" id="foundTable">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>#</th>
+                                                                <th>Report Id</th>
+                                                                <th>Document</th>
+                                                                <th>Missing Date</th>
+                                                                <!-- <th></th>
+                                                                            <th></th> -->
+                                                                <th>Reported date</th>
+                                                                <th>Status</th>
+                                                                <th>Change status</th>
+                                            
+                                                            </tr>
+                                                        </thead>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -215,6 +236,7 @@
 
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/profile.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </body>
 
 </html>

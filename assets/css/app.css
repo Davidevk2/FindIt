@@ -905,7 +905,7 @@ strong {
   outline: none;
 }
 
-.custom-form .form-control {
+.custom-form .form-control:no-button {
   border-radius: var(--border-radius-small);
   border-color: var(--border-color);
   color: var(--p-color);

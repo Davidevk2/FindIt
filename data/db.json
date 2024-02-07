@@ -41,6 +41,34 @@
       "role": "User",
       "last_session": "",
       "creation_date": "Mon, 05 Feb 2024 21:02:00 GMT"
+    },
+    {
+      "id": "78e0",
+      "identification": "1019",
+      "name": "Daniela",
+      "last_name": "Guzman",
+      "email": "daniela@gmail.com",
+      "password": "1234",
+      "phone": "32121",
+      "gender": "",
+      "city": "Medellín ",
+      "role": "User",
+      "last_session": "",
+      "creation_date": "Wed, 07 Feb 2024 04:10:07 GMT"
+    },
+    {
+      "id": "e87c",
+      "identification": "",
+      "name": "admin",
+      "last_name": "",
+      "email": "admin@findit.com",
+      "password": "admin",
+      "phone": "32020",
+      "gender": "",
+      "city": "",
+      "role": "Admin",
+      "last_session": "",
+      "creation_date": "Wed, 07 Feb 2024 05:17:03 GMT"
     }
   ],
   "lost_items": [
@@ -200,22 +228,302 @@
       "reported_date": "Sat, 03 Feb 2024 17:12:25 GMT"
     }
   ],
+  "lost_things": [
+    {
+      "element": "keys",
+      "reported_date": "2022-01-01",
+      "userId": "12345",
+      "img": "example.com/keys.jpg",
+      "description": "Small set of keys",
+      "id": "1",
+      "status": "lost"
+    },
+    {
+      "element": "wallets",
+      "reported_date": "2022-01-02",
+      "userId": "67890",
+      "img": "example.com/wallet.jpg",
+      "description": "Black leather wallet",
+      "id": "2",
+      "status": "lost"
+    },
+    {
+      "element": "bags",
+      "reported_date": "2022-01-03",
+      "userId": "54321",
+      "img": "example.com/bag.jpg",
+      "description": "Red backpack",
+      "id": "3",
+      "status": "lost"
+    },
+    {
+      "element": "keys",
+      "reported_date": "2022-01-04",
+      "userId": "09876",
+      "img": "example.com/keys.jpg",
+      "description": "Large set of keys",
+      "id": "4",
+      "status": "lost"
+    },
+    {
+      "element": "wallets",
+      "reported_date": "2022-01-05",
+      "userId": "45678",
+      "img": "example.com/wallet.jpg",
+      "description": "Brown leather wallet",
+      "id": "5",
+      "status": "lost"
+    },
+    {
+      "element": "bags",
+      "reported_date": "2022-01-06",
+      "userId": "76543",
+      "img": "example.com/bag.jpg",
+      "description": "Blue backpack",
+      "id": "6",
+      "status": "lost"
+    },
+    {
+      "element": "keys",
+      "reported_date": "2022-01-07",
+      "userId": "23456",
+      "img": "example.com/keys.jpg",
+      "description": "Keychain with a single key",
+      "id": "7",
+      "status": "lost"
+    },
+    {
+      "element": "wallets",
+      "reported_date": "2022-01-08",
+      "userId": "65432",
+      "img": "example.com/wallet.jpg",
+      "description": "Slim cardholder",
+      "id": "8",
+      "status": "lost"
+    },
+    {
+      "element": "bags",
+      "reported_date": "2022-01-09",
+      "userId": "43210",
+      "img": "example.com/bag.jpg",
+      "description": "Green tote bag",
+      "id": "9",
+      "status": "lost"
+    },
+    {
+      "element": "keys",
+      "reported_date": "2022-01-10",
+      "userId": "87654",
+      "img": "example.com/keys.jpg",
+      "description": "Key fob with a car key",
+      "id": "10",
+      "status": "lost"
+    },
+    {
+      "element": "wallets",
+      "reported_date": "2022-01-11",
+      "userId": "34567",
+      "img": "example.com/wallet.jpg",
+      "description": "Zip-around wallet",
+      "id": "11",
+      "status": "lost"
+    },
+    {
+      "element": "bags",
+      "reported_date": "2022-01-12",
+      "userId": "98765",
+      "img": "example.com/bag.jpg",
+      "description": "Canvas messenger bag",
+      "id": "12",
+      "status": "lost"
+    },
+    {
+      "element": "keys",
+      "reported_date": "2022-01-13",
+      "userId": "87654",
+      "img": "example.com/keys.jpg",
+      "description": "Set of house keys",
+      "id": "13",
+      "status": "lost"
+    },
+    {
+      "element": "wallets",
+      "reported_date": "2022-01-14",
+      "userId": "23456",
+      "img": "example.com/wallet.jpg",
+      "description": "Bifold wallet",
+      "id": "14",
+      "status": "lost"
+    },
+    {
+      "element": "bags",
+      "reported_date": "2022-01-15",
+      "userId": "65432",
+      "img": "example.com/bag.jpg",
+      "description": "Leather duffel bag",
+      "id": "15",
+      "status": "lost"
+    },
+    {
+      "element": "keys",
+      "reported_date": "2022-01-16",
+      "userId": "54321",
+      "img": "example.com/keys.jpg",
+      "description": "Lanyard with a set of keys",
+      "id": "16",
+      "status": "lost"
+    },
+    {
+      "element": "wallets",
+      "reported_date": "2022-01-17",
+      "userId": "12345",
+      "img": "example.com/wallet.jpg",
+      "description": "Designer clutch",
+      "id": "17",
+      "status": "lost"
+    },
+    {
+      "element": "bags",
+      "reported_date": "2022-01-18",
+      "userId": "67890",
+      "img": "example.com/bag.jpg",
+      "description": "Black leather shoulder bag",
+      "id": "18",
+      "status": "lost"
+    },
+    {
+      "element": "keys",
+      "reported_date": "2022-01-19",
+      "userId": "54321",
+      "img": "example.com/keys.jpg",
+      "description": "Single key with a keychain",
+      "id": "19",
+      "status": "lost"
+    },
+    {
+      "element": "wallets",
+      "reported_date": "2022-01-20",
+      "userId": "67890",
+      "img": "example.com/wallet.jpg",
+      "description": "Trifold wallet",
+      "id": "20",
+      "status": "lost"
+    },
+    {
+      "element": "bags",
+      "reported_date": "2022-01-21",
+      "userId": "12345",
+      "img": "example.com/bag.jpg",
+      "description": "Nylon backpack",
+      "id": "21",
+      "status": "lost"
+    },
+    {
+      "element": "keys",
+      "reported_date": "2022-01-22",
+      "userId": "23456",
+      "img": "example.com/keys.jpg",
+      "description": "Set of office keys",
+      "id": "22",
+      "status": "lost"
+    },
+    {
+      "element": "wallets",
+      "reported_date": "2022-01-23",
+      "userId": "45678",
+      "img": "example.com/wallet.jpg",
+      "description": "Leather money clip",
+      "id": "23",
+      "status": "lost"
+    },
+    {
+      "element": "bags",
+      "reported_date": "2022-01-24",
+      "userId": "76543",
+      "img": "example.com/bag.jpg",
+      "description": "Pink tote bag",
+      "id": "24",
+      "status": "lost"
+    },
+    {
+      "element": "keys",
+      "reported_date": "2022-01-25",
+      "userId": "09876",
+      "img": "example.com/keys.jpg",
+      "description": "Keychain with a house key",
+      "id": "25",
+      "status": "lost"
+    },
+    {
+      "element": "wallets",
+      "reported_date": "2022-01-26",
+      "userId": "45678",
+      "img": "example.com/wallet.jpg",
+      "description": "Slim leather wallet",
+      "id": "26",
+      "status": "lost"
+    },
+    {
+      "element": "bags",
+      "reported_date": "2022-01-27",
+      "userId": "76543",
+      "img": "example.com/bag.jpg",
+      "description": "Leather crossbody bag",
+      "id": "27",
+      "status": "lost"
+    },
+    {
+      "element": "keys",
+      "reported_date": "2022-01-28",
+      "userId": "23456",
+      "img": "example.com/keys.jpg",
+      "description": "Set of locker keys",
+      "id": "28",
+      "status": "lost"
+    },
+    {
+      "element": "wallets",
+      "reported_date": "2022-01-29",
+      "userId": "65432",
+      "img": "example.com/wallet.jpg",
+      "description": "Travel wallet",
+      "id": "29",
+      "status": "lost"
+    },
+    {
+      "element": "bags",
+      "reported_date": "2022-01-30",
+      "userId": "43210",
+      "img": "example.com/bag.jpg",
+      "description": "Small shoulder bag",
+      "id": "30",
+      "status": "lost"
+    }
+  ],
   "messages": [],
   "mails": [
     {
-      "id": "8cb0",
-      "name": "",
-      "email": "correo@correo.com",
-      "subject": "some troubles in the page",
-      "message": "Some to say ",
-      "send_date": "Tue, 06 Feb 2024 02:16:37 GMT"
+      "id": "558f",
+      "name": "Esteban",
+      "email": "estabncon@gmail.com",
+      "subject": "algo por decir ",
+      "message": "algo por contar ",
+      "send_date": 2024
     },
     {
-      "id": "abc1",
-      "name": "",
-      "email": "juanjose@gmail.com",
-      "subject": "some to say ",
-      "message": "some to say here ",
+      "id": "b256",
+      "name": "Daniel ",
+      "email": "daniel@correo.com",
+      "subject": "revisar la pagina ",
+      "message": "algo por decir",
+      "send_date": 2024
+    },
+    {
+      "id": "770a",
+      "name": "David",
+      "email": "david@gmail.com",
+      "subject": "revisar los terminos y condiciones",
+      "message": "Revisar lo que hay en terminos y condiciones ",
       "send_date": 2024
     }
   ]

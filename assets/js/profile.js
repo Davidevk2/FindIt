@@ -1,14 +1,14 @@
+// get the elements from the HTML file
 const btnUpdate = document.getElementById("btnUpdate");
-console.log(btnUpdate);
-
 const lostTable = document.getElementById("lostTable");
 const tbodyLost = document.createElement("tbody");
-lostTable.appendChild(tbodyLost);
+lostTable.appendChild(tbodyLost); //add the element to his parentnode
 
 const foundTable = document.getElementById("foundTable");
 const tbodyFound = document.createElement("tbody");
 foundTable.appendChild(tbodyFound);
 
+// call a function when the document has load
 window.addEventListener("DOMContentLoaded",getAllData())
 
 async function getAllData(){
@@ -16,17 +16,20 @@ async function getAllData(){
 
     let url = `http://localhost:3000/users/${userId}/?_embed=lost_items&_embed=found_items`;
 
+    // make a request to load the information of the current user
     let request = await fetch(url);
     let response = await request.json();
     
     let lostItems = response.lost_items;
     let foundItems = response.found_items;
     
+    // send the info to function to show it in the html
     fillProfileInfo(response);
     fillTables(lostItems, tbodyLost);
     fillTables(foundItems, tbodyFound);
 }
 
+// fill the inputs with the user information 
 function fillProfileInfo(response){
     let infoProfile = document.querySelectorAll(".info-profile");
     let letter = response.name[0].toUpperCase();
@@ -47,7 +50,7 @@ function fillProfileInfo(response){
     inputRequired[6].value = response.city;
 }
 
-// Fill the tables 
+// Fill the tables for lost and found items
 function fillTables(data, tbTable) {
     if(data.length < 1){
         let row = document.createElement("tr");
@@ -99,10 +102,11 @@ function fillTables(data, tbTable) {
 }
 
 btnUpdate.addEventListener("click", updateUser);
-
+// function to update the user information
 async function updateUser(){
     let userId = localStorage.getItem("user");
-
+    
+    // get the information from the inputs
     let inputIdenti = document.updateForm.identification.value;
     let inputName = document.updateForm.name.value;
     let inputLName = document.updateForm.lastName.value;
@@ -112,8 +116,10 @@ async function updateUser(){
     let inputGender =  document.updateForm.gender.value;
     let inputCity   = document.updateForm.city.value;
 
+    // validate that the required inputs are not empty 
     if(inputName != "" && inputEmail != "" && inputPass != "" && inputPhone != ""){
 
+        // assign the data from the inputs in the object
         let userInfo = {
             identification: inputIdenti,
             name: inputName,
@@ -124,10 +130,9 @@ async function updateUser(){
             gender: inputGender,
             city: inputCity,
         }
+        // console.log(userInfo);
 
-
-        console.log(userInfo);
-
+        // make a request to update de the user information
         let request = await fetch(`http://localhost:3000/users/${userId}`, 
             {method : "PATCH", headers: {
                 "Content-type":"application/json"
@@ -136,8 +141,9 @@ async function updateUser(){
             })
 
         let response = await request;
-        if (response.ok == true || (response.status == 201 || response.status == 200)) {
+        if (request.ok == true || (request.status == 201 || request.status == 200)) {
             console.log("The user was update successfully");
+            // show an alert to notify
             showMessages("Great", "the user was updated successfully", "success",true);
 
             setTimeout(()=>{
@@ -146,13 +152,16 @@ s            },2000);
         } else {
             message = "Error trying to edit the user!";
             messageColor = "red";
+            // call the funtion to notify the user whe are empty inputs
             showInfoMessage(message, messageColor);
             console.log("error trying to create user !");
         }
 
-        console.log(response);
+        // console.log(response);
     }else{
-        let message = "Some required inputs are empty!"
+
+        let message = "Some required inputs are empty!";
+        // call the funtion to notify the user whe are empty inputs
         showInfoMessage(message, "red");
     }
 

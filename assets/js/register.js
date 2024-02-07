@@ -1,5 +1,6 @@
+//create a const for the Date object
 const date = new Date();
-
+// get the elements from the HTML file
 const btnSignUp = document.getElementById("btnSingUp");
 const checkBoxTerm = document.getElementById("cbxTerms");
 const spanMessages = document.getElementById("messages");
@@ -43,7 +44,7 @@ async function singUpUser(){
             
             let response = await request;
             let data = await response.json();
-            if (response.ok == true || (response.status == 201 || response.status == 200)){
+            if (request.ok == true || (request.status == 201 || request.status == 200)){
                 console.log("The user was created successfully");
       
                 let loggin = "true";
@@ -51,6 +52,9 @@ async function singUpUser(){
                 // clearData();
                 localStorage.setItem("login", loggin);
                 localStorage.setItem("user", logged);
+                localStorage.setItem("name", name);
+                localStorage.setItem("role", "User");
+
                 window.location.href = "home.html";
             }else{
                 message = "Error trying to create the user!";
@@ -76,36 +80,3 @@ async function singUpUser(){
 
 }
 
-
-// get the current Date  to create user
-function getCurrentDate(){
-    return date.toUTCString();
-}
-
-function showInfoMessage(message, color) {
-    let inputs = document.querySelectorAll(".form-control");
-
-    inputs.forEach((input) => {
-        if(input.value == ""){
-            input.classList.add("is-invalid");
-            input.style.border = "1px solid red";
-
-        }
-    });
-
-    spanMessages.classList.toggle("hidden");
-    spanMessages.style.color = color;
-    spanMessages.innerText = message;
-
-    setTimeout(() => {
-        spanMessages.classList.toggle("hidden");
-        spanMessages.innerText = "";
-
-        inputs.forEach((input) => {
-            input.classList.remove("is-invalid");
-            input.style.border = "1px solid #6A6A6D";
-        });
-
-    }, 5000);
-
-}

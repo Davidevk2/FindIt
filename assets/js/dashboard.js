@@ -26,7 +26,7 @@ async function loadAllData(){
     let requestFound = await fetch(urlFound);
     let dataFound = await requestFound.json();
     createFoundStadistics(dataFound);
-
+    // request to the mails endPoint
     let requestEmails = await fetch(urlMails);
     let dataMails = await requestEmails.json();
     listAllMails(dataMails);
@@ -35,11 +35,12 @@ async function loadAllData(){
 loadAllData();
 
 function createUserStadistics(dataUsers){
-    console.log(dataUsers);
+    // console.log(dataUsers);
     let totalItems = dataUsers.length < 10 ? "0" + dataUsers.length : "0" + dataUsers.length;
 
     let genders = ["Male", "Female", "Other"];
-    let results = []
+    let resultsGenders = [];
+    let resultsAdmins = [];
 
     genders.forEach((element) => {
         let iterator = 0;
@@ -49,24 +50,30 @@ function createUserStadistics(dataUsers){
             }
             return iterator;
         })
-        results.push(iterator);
+        resultsGenders.push(iterator);
     })
 
+    
+    let amount = dataUsers.filter(item => {
+        return item.role == "Admin";
+    })
+    let totalAdmins = amount.length;
+    console.log(totalAdmins);
+
     spanUsers.innerText = totalItems;
-    createChart(canvasGender, "doughnut", genders, "# number of users by gender", results);
+    createChart(canvasGender, "doughnut", genders, "# number of users by gender", resultsGenders);
 }
 
+// function to crete lost stadistics
 function createLostStadistics(dataLost) {
-    console.log(dataLost);
+    // console.log(dataLost);
 
     let totalItems = dataLost.length < 10 ? "0" + dataLost.length : "0" + dataLost.length;
 
     let types_documents = ["cc", "ti", "pasaporte", "lconducion", "carnet","otro"];
-    let results = []
+    let results = [];
 
     types_documents.forEach((element) => {
-
-
         let iterator = 0;
         let amount = dataLost.map(item => {
             if (element == item.document_type) {
@@ -83,8 +90,9 @@ function createLostStadistics(dataLost) {
     createChart(canvasLost, "bar", types_documents, "# of lost by document type", results);
 }
 
+// function to create found stadistics
 function createFoundStadistics(dataFound) {
-    console.log(dataFound);
+    // console.log(dataFound);
 
     let totalItems = dataFound.length < 10 ? "0" + dataFound.length : "0" + dataFound.length ;
 
@@ -107,13 +115,13 @@ function createFoundStadistics(dataFound) {
 }
 
 
+// function to create and list all emails
 function listAllMails(dataMails){
     let tableMails = document.getElementById("tblMails");
     const tbody = document.createElement("tbody");
         tableMails.appendChild(tbody);
 
     dataMails.forEach(mail =>{
-        console.log(mail.email);
         let row = document.createElement("tr");
         let Content = `
                 <td>
@@ -136,7 +144,7 @@ function listAllMails(dataMails){
 }
 
 
-
+// function to create charts with chart js
 function createChart(element, typeChar, labelsData, title, data){
 
     new Chart(element, {

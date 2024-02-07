@@ -56,8 +56,7 @@
     });
 })();
 
-// Click Scroll
-
+// Manage the sections in the landing
 var sectionArray = [1, 2, 3, 4, 5];
 
 function handleScroll(index, value) {
@@ -106,26 +105,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Background Color Target
 
-// document.addEventListener('DOMContentLoaded', function () {
-//     var targetElement = document.querySelector('[id*=section_]');    
-//     var backgroundChangeElement = document.querySelector('.navbar');
-
-//     function handleScroll() {
-//         var targetRect = targetElement.getBoundingClientRect();
-//         if (targetRect.top >= 0 && targetRect.bottom <= window.innerHeight) {
-//             backgroundChangeElement.classList.remove('is-active');
-//         } else {
-//             backgroundChangeElement.classList.add('is-active');
-//         }
-//     }
-
-//     window.addEventListener('scroll', handleScroll);
-// });
-
-
-// test menu
+// function to change the navbar when we make scrolls
 window.onscroll = function () {
     // console.log("El scrol se mueve");
     const  navbar = document.querySelector('.navbar');
@@ -138,23 +119,26 @@ window.onscroll = function () {
     }
 }
 
-
+// elements from the contact form
 const btnSend = document.getElementById("btnSend");
 console.log(btnSend);
 
+// Call the function when the user makes click
 btnSend.addEventListener("click", sendMail);
 async function sendMail(){
     let date = new Date();
 
-    let inputName = document.mailsForm.name.value;
+    // Get data from the inputs
+    let inputName = document.mailsForm.username.value;
     let inputEmail = document.mailsForm.email.value;
     let inputSubject = document.mailsForm.subject.value;
     let inputMessage = document.mailsForm.message.value;
-    console.log(inputEmail, inputEmail, inputMessage, inputSubject);
+    console.log(inputName, inputEmail, inputMessage, inputSubject);
     let message = "";
     let messageColor = "";
 
-    if(inputName != " " && inputEmail != " " && inputSubject != " " && inputMessage != " "){
+    // validate the form if is empty or no
+    if(inputName != "" && inputEmail != "" && inputSubject != "" && inputMessage != ""){
 
         let mailData = {
             name : inputName,
@@ -164,16 +148,17 @@ async function sendMail(){
             send_date : date.getFullYear()
         }
 
-        console.log(mailData);
-
+        // make the request to the send the mail information to json
         let request = await fetch("http://localhost:3000/mails/", {method: "POST", headers:{
             "Content-Type":"application/json"
         },
-    body: JSON.stringify(mailData)});
-    let response = await request;
-    console.log(response);
+        body: JSON.stringify(mailData)});
 
-        if (response.ok == true || (response.status == 201 || response.status == 200)) {
+        let response = await request;
+        console.log(request);
+
+        // Show to the user if everythin is ok or there is problems to send
+        if (request.ok == true || (request.status == 201 || request.status == 200)) {
             console.log("the email was send successfully");
             message = "the email was send successfully";
             messageColor = "green";
@@ -187,47 +172,10 @@ async function sendMail(){
             console.log("Error trying to send the email!");
         }
 
-    
     }else{
-        let message = "Some inputs are empty";
+        let message = "Some required  inputs are empty!";
         messageColor = "red";
         showInfoMessage(message, messageColor);
     }
 
-}
-
-
-function showInfoMessage(message, color) {
-    let inputs = document.querySelectorAll(".form-control");
-    let spanMessages = document.getElementById("messages");
-
-    inputs.forEach((input) => {
-        if (input.value == "") {
-            input.classList.add("is-invalid");
-            input.style.border = "1px solid red";
-
-        }
-    });
-
-    spanMessages.classList.toggle("hidden");
-    spanMessages.style.color = color;
-    spanMessages.innerText = message;
-
-    setTimeout(() => {
-        spanMessages.classList.toggle("hidden");
-        spanMessages.innerText = "";
-
-        inputs.forEach((input) => {
-            input.classList.remove("is-invalid");
-            input.style.border = "1px solid #6A6A6D";
-        });
-
-    }, 5000);
-
-}   
-
-
-function clearData(){
-    let form = document.mailsForm;
-    form.reset();
 }

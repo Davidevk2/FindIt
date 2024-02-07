@@ -1,22 +1,5 @@
 
-function logout(){
-    localStorage.clear();
-    setTimeout(()=>{
-        window.location.href = "login.html";
-    },500)
-}
-
-// Check if there is sesion 
-function checkLogin(){
-    let logged = localStorage.getItem("login");
-    if(!logged){
-       location.href = "login.html";
-    }else{
-        setProfileIcon();
-    }
-}
-
-// show Alerts or Errors!
+// show Alerts or Errors with sweetalert!
 function showMessages(titulo, text, icon) {
     Swal.fire({
         title: titulo,
@@ -29,7 +12,6 @@ function showMessages(titulo, text, icon) {
     })
 }
 
-
 // Show messages when the required inputs are empty
 function showInfoMessage(message, color) {
     let inputs = document.querySelectorAll(".form-required");
@@ -39,12 +21,12 @@ function showInfoMessage(message, color) {
         if (input.value == "") {
             input.classList.add("is-invalid");
             input.style.border = "1px solid red";
-
         }
     });
 
     spanMessages.classList.toggle("hidden");
     spanMessages.style.color = color;
+    spanMessages.style.border = `1px solid ${color}`;
     spanMessages.innerText = message;
 
     setTimeout(() => {
@@ -58,20 +40,15 @@ function showInfoMessage(message, color) {
 
     }, 5000);
 
-}   
-
-
-function setProfileIcon(){
-    let divProfile = document.querySelectorAll(".navbar-icon");
-    let name = localStorage.getItem("name");
-    let letter = name[0].toUpperCase();
-    
-    divProfile[0].innerText = letter;
-    divProfile[1].innerText = letter;
-
 }
 
-// Control the scroll
+// clean the data from the form
+function clearData() {
+    let form = document.getElementsByTagName("form");
+    form[0].reset();
+}  
+
+// change the nav when  we move the scroll
 window.onscroll = function () {
     // console.log("El scrol se mueve");
     const  navbar = document.querySelector('.navbar');
@@ -84,4 +61,7 @@ window.onscroll = function () {
     }
 }
 
-checkLogin();
+// get the current Date  to create user
+function getCurrentDate() {
+    return date.toUTCString();
+}

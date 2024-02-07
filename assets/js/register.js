@@ -1,5 +1,6 @@
+//create a const for the Date object
 const date = new Date();
-
+// get the elements from the HTML file
 const btnSignUp = document.getElementById("btnSingUp");
 const checkBoxTerm = document.getElementById("cbxTerms");
 const spanMessages = document.getElementById("messages");
@@ -82,6 +83,7 @@ function getCurrentDate(){
     return date.toUTCString();
 }
 
+// Show messages when the required inputs are empty
 function showInfoMessage(message, color) {
     let inputs = document.querySelectorAll(".form-control");
 

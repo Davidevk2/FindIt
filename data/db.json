@@ -200,7 +200,7 @@
       "reported_date": "Sat, 03 Feb 2024 17:12:25 GMT"
     }
   ],
-  "lost_things":[
+  "lost_things": [
     {
       "element": "keys",
       "reported_date": "2022-01-01",
@@ -475,19 +475,27 @@
   "messages": [],
   "mails": [
     {
-      "id": "8cb0",
-      "name": "",
-      "email": "correo@correo.com",
-      "subject": "some troubles in the page",
-      "message": "Some to say ",
-      "send_date": "Tue, 06 Feb 2024 02:16:37 GMT"
+      "id": "558f",
+      "name": "Esteban",
+      "email": "estabncon@gmail.com",
+      "subject": "algo por decir ",
+      "message": "algo por contar ",
+      "send_date": 2024
     },
     {
-      "id": "abc1",
-      "name": "",
-      "email": "juanjose@gmail.com",
-      "subject": "some to say ",
-      "message": "some to say here ",
+      "id": "b256",
+      "name": "Daniel ",
+      "email": "daniel@correo.com",
+      "subject": "revisar la pagina ",
+      "message": "algo por decir",
+      "send_date": 2024
+    },
+    {
+      "id": "770a",
+      "name": "David",
+      "email": "david@gmail.com",
+      "subject": "revisar los terminos y condiciones",
+      "message": "Revisar lo que hay en terminos y condiciones ",
       "send_date": 2024
     }
   ]

@@ -1,5 +1,4 @@
 const btnUpdate = document.getElementById("btnUpdate");
-console.log(btnUpdate);
 
 const lostTable = document.getElementById("lostTable");
 const tbodyLost = document.createElement("tbody");

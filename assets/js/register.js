@@ -44,7 +44,7 @@ async function singUpUser(){
             
             let response = await request;
             let data = await response.json();
-            if (response.ok == true || (response.status == 201 || response.status == 200)){
+            if (request.ok == true || (request.status == 201 || request.status == 200)){
                 console.log("The user was created successfully");
       
                 let loggin = "true";
@@ -78,36 +78,36 @@ async function singUpUser(){
 }
 
 
-// get the current Date  to create user
-function getCurrentDate(){
-    return date.toUTCString();
-}
+// // get the current Date  to create user
+// function getCurrentDate(){
+//     return date.toUTCString();
+// }
 
-// Show messages when the required inputs are empty
-function showInfoMessage(message, color) {
-    let inputs = document.querySelectorAll(".form-control");
+// // Show messages when the required inputs are empty
+// function showInfoMessage(message, color) {
+//     let inputs = document.querySelectorAll(".form-control");
 
-    inputs.forEach((input) => {
-        if(input.value == ""){
-            input.classList.add("is-invalid");
-            input.style.border = "1px solid red";
+//     inputs.forEach((input) => {
+//         if(input.value == ""){
+//             input.classList.add("is-invalid");
+//             input.style.border = "1px solid red";
 
-        }
-    });
+//         }
+//     });
 
-    spanMessages.classList.toggle("hidden");
-    spanMessages.style.color = color;
-    spanMessages.innerText = message;
+//     spanMessages.classList.toggle("hidden");
+//     spanMessages.style.color = color;
+//     spanMessages.innerText = message;
 
-    setTimeout(() => {
-        spanMessages.classList.toggle("hidden");
-        spanMessages.innerText = "";
+//     setTimeout(() => {
+//         spanMessages.classList.toggle("hidden");
+//         spanMessages.innerText = "";
 
-        inputs.forEach((input) => {
-            input.classList.remove("is-invalid");
-            input.style.border = "1px solid #6A6A6D";
-        });
+//         inputs.forEach((input) => {
+//             input.classList.remove("is-invalid");
+//             input.style.border = "1px solid #6A6A6D";
+//         });
 
-    }, 5000);
+//     }, 5000);
 
-}
+// }

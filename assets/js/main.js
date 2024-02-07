@@ -26,7 +26,7 @@ function showInfoMessage(message, color) {
 
     spanMessages.classList.toggle("hidden");
     spanMessages.style.color = color;
-    spanMessages.style.border = `1px solid ${color}`;
+    // spanMessages.style.border = `1px solid ${color}`;
     spanMessages.innerText = message;
 
     setTimeout(() => {

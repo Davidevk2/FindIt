@@ -18,112 +18,183 @@
 </head>
 
 <body>
+    <section class="section">
+        <header>
+            <nav class="navbar is-active navbar-expand-lg fixed-top">
+                <div class="container">
+                    <a class="navbar-brand" href="./dashboard.html">
+                        <img src="../assets/images/logo.svg" alt="logo">
+                    </a>
+                    <div class="d-lg-none ms-auto me-4">
+                        <a href="profile.html" class="navbar-icon" id="navProfile">S</a>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-lg-5 me-lg-auto">
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="./dashboard.html">Dashboard</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">Admin</a>
+                                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="./users.html">Users</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="./reports.html">Things</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="./home.html">Report</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="./searchEngine.html">Search</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll" href="#section_4">Notifications</a>
+                            </li>
+                        </ul>
+                        <div class="d-none d-lg-block">
+                            <a href="profile.html" class="navbar-icon" id="navProfile">S</a>
+                            <!-- <a href="#top" class="navbar-icon bi-person smoothscroll"></a> -->
+                        </div>
+                        <a class="log-btn ms-3" href="#" onclick="logout();">Logout</a>
+                    </div>
+                </div>
+            </nav>
+        </header> 
+    </section>
+    <section class="section-normal d-flex justify-content-center align-items-center">
+        <div class="container ">
+            <h3>Dashboard</h3>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="small-card">
+                        <div class="row">
+                            <div class="col-6 d-flex justify-content-center">
+                                <div class="rounded-icon">
+                                    <i class="bi bi-people h1 avatar-title"></i>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="widget-text text-end">
+                                    <h3 class="title"><span class="" id="countUser">127</span></h3>
+                                    <span class="disabled">Users</span>
+                                </div>
+                            </div>
+                        </div> <!-- end row-->
     
-    <div class="container">
-        <h3>Dashboard</h3>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="small-card">
-                    <div class="row">
-                        <div class="col-6 d-flex justify-content-center">
-                            <div class="rounded-icon">
-                                <i class="bi bi-people h1 avatar-title"></i>
+                    </div> <!-- end widget-rounded-circle-->
+                </div>
+                <div class="col-md-3">
+                    <div class="small-card">
+                        <div class="row">
+                            <div class="col-6 d-flex justify-content-center">
+                                <div class="rounded-icon">
+                                    <i class="bi bi-wallet h1 avatar-title"></i>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="widget-text text-end">
-                                <h3 class="title"><span class="" id="countUser">127</span></h3>
-                                <span class="disabled">Users</span>
+                            <div class="col-6">
+                                <div class="widget-text text-end">
+                                    <h3 class="title"><span class="" id="countLost">127</span></h3>
+                                    <span class="disabled">Lost items</span>
+                                </div>
                             </div>
-                        </div>
-                    </div> <!-- end row-->
+                        </div> <!-- end row-->
+                
+                    </div> <!-- end widget-rounded-circle-->
+                </div>
+    
+                <div class="col-md-3">
+                    <div class="small-card">
+                        <div class="row">
+                            <div class="col-6 d-flex justify-content-center">
+                                <div class="rounded-icon">
+                                    <i class="bi bi-person-vcard h1 avatar-title"></i>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="widget-text text-end">
+                                    <h3 class="title"><span class="" id="countFound">127</span></h3>
+                                    <span class="disabled">Found items</span>
+                                </div>
+                            </div>
+                        </div> <!-- end row-->
+                
+                    </div> <!-- end widget-rounded-circle-->
+                </div>
 
-                </div> <!-- end widget-rounded-circle-->
+                <div class="col-md-3">
+                    <div class="small-card">
+                        <div class="row">
+                            <div class="col-6 d-flex justify-content-center">
+                                <div class="rounded-icon">
+                                    <i class="bi bi-person-lock h1 avatar-title"></i>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="widget-text text-end">
+                                    <h3 class="title"><span class="" id="countAdmins">127</span></h3>
+                                    <span class="disabled">Admins</span>
+                                </div>
+                            </div>
+                        </div> <!-- end row-->
+                
+                    </div> <!-- end widget-rounded-circle-->
+                </div>
+    
             </div>
-            <div class="col-md-3">
-                <div class="small-card">
-                    <div class="row">
-                        <div class="col-6 d-flex justify-content-center">
-                            <div class="rounded-icon">
-                                <i class="bi bi-wallet h1 avatar-title"></i>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="widget-text text-end">
-                                <h3 class="title"><span class="" id="countLost">127</span></h3>
-                                <span class="disabled">Lost items</span>
-                            </div>
-                        </div>
-                    </div> <!-- end row-->
-            
-                </div> <!-- end widget-rounded-circle-->
+            <div class="grid-charts">
+                <div class="grid-item-chart item-one">
+                    <div class="card">
+                        <canvas class="lienzo" id="chartGender"></canvas>
+                    </div>
+                </div>
+                <div class="grid-item-chart item-two">
+                    <div class="card">
+                        <canvas class="lienzo" id="chartLost"></canvas>
+                    </div>
+                </div>
+                <div class="grid-item-chart item-three">
+                    <div class="card">
+                        <canvas class="lienzo" id="chartFound"></canvas>
+                    </div>
+                </div>
+                <div class="grid-item-chart item-four">
+                    <div class="card">
+                        <!-- <canvas class="lienzo" id="chartFound"></canvas> -->
+                        <table class="table table-striped table-hover" id="tblMails">
+                            <thead>
+                                <tr>
+                                    <td colspan="2">Inbox</td>
+                                    <td colspan="3"><input type="search" name="" id="" class="form-control" placeholder="search"></td>
+                                    <td colspan="1"><button class="btn btn-sm btn-primary"><i class="bi-search"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <th><input type="checkbox" name="" id=""></th>
+                                    <th><span><i class="bi-trash"></i></span></th>
+                                    <th><span><i class="bi bi-arrow-clockwise"></i></span></th>
+                                    <th></th>
+                                    <th colspan="2">50/200</th>
+                                </tr>
+                            </thead>
+                            
+                        </table>
+                    </div>
+                </div>
+                
+    
             </div>
-
-            <div class="col-md-3">
-                <div class="small-card">
-                    <div class="row">
-                        <div class="col-6 d-flex justify-content-center">
-                            <div class="rounded-icon">
-                                <i class="bi bi-person-vcard h1 avatar-title"></i>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="widget-text text-end">
-                                <h3 class="title"><span class="" id="countFound">127</span></h3>
-                                <span class="disabled">Found items</span>
-                            </div>
-                        </div>
-                    </div> <!-- end row-->
-            
-                </div> <!-- end widget-rounded-circle-->
-            </div>
-
         </div>
-        <div class="grid-charts">
-            <div class="grid-item-chart item-one">
-                <div class="card">
-                    <canvas class="lienzo" id="chartGender"></canvas>
-                </div>
-            </div>
-            <div class="grid-item-chart item-two">
-                <div class="card">
-                    <canvas class="lienzo" id="chartLost"></canvas>
-                </div>
-            </div>
-            <div class="grid-item-chart item-three">
-                <div class="card">
-                    <canvas class="lienzo" id="chartFound"></canvas>
-                </div>
-            </div>
-            <div class="grid-item-chart item-four">
-                <div class="card">
-                    <!-- <canvas class="lienzo" id="chartFound"></canvas> -->
-                    <table class="table table-striped table-hover" id="tblMails">
-                        <thead>
-                            <tr>
-                                <td colspan="2">Inbox</td>
-                                <td colspan="3"><input type="search" name="" id="" class="form-control" placeholder="search"></td>
-                                <td colspan="1"><button class="btn btn-sm btn-primary"><i class="bi-search"></i></button></td>
-                            </tr>
-                            <tr>
-                                <th><input type="checkbox" name="" id=""></th>
-                                <th><span><i class="bi-trash"></i></span></th>
-                                <th><span><i class="bi bi-arrow-clockwise"></i></span></th>
-                                <th></th>
-                                <th colspan="2">50/200</th>
-                            </tr>
-                        </thead>
-                        
-                    </table>
-                </div>
-            </div>
-            
-
-        </div>
-    </div>
+    </section>
+    
 
 
     <script src="../assets/js/dashboard.js"></script>
+    <script src="../assets/js/session.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </body>

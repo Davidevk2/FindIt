@@ -464,6 +464,12 @@ strong {
 /*---------------------------------------
     HEADER        
   -----------------------------------------*/
+.section-normal {
+  overflow: hidden;
+  padding-top: 100px;
+  padding-bottom: 150px;
+}
+
 .header-section-normal {
   background-image: linear-gradient(15deg, #0E43A0 0%, #1257CF 100%);
   position: relative;

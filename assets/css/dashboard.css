@@ -1,3 +1,4 @@
+@import url("./root.css");
 body {
     background-color: #F4F6F9;
 }
@@ -10,7 +11,7 @@ body {
 .small-card {
     flex: 1;
     width: 100%;
-    background-color: white;
+    background-color: var(--white-color);
     border-radius: 6px;
     border: 1px solid rgba(181, 181, 181, 0.756);
     margin-bottom: 10px;
@@ -30,7 +31,7 @@ body {
 
 .rounded-icon i {
     margin: auto;
-    color: #2C2D42;
+    color: var(--section-bg-color);
 }
 
 .widget-text {
@@ -43,14 +44,12 @@ body {
     padding: 0;
     top: 0;
     margin: 0px;
-    color: #2C2D42;
-    /* color: #1E1E1E; */
+    color: var(--section-bg-color);
 }
 
 .widget-text .disabled {
     margin-top: 10px;
-    /* color: #2C2D42; */
-    color: #6A6A6D;
+    color: var(--p-color) ;
     font-size: 14px;
     font-weight: 500;
 }
@@ -64,7 +63,7 @@ body {
 
 .card {
     border-radius: 8px;
-    padding: 10px;
+    padding: 5px;
 }
 
 /* .grid-charts .card{

@@ -3,6 +3,7 @@ const canvasLost = document.getElementById("chartLost");
 const canvasFound = document.getElementById("chartFound");
 
 const spanUsers = document.getElementById("countUser");
+const spanAdmins = document.getElementById("countAdmins");
 const spanLost = document.getElementById("countLost");
 const spanFound = document.getElementById("countFound");
 
@@ -40,7 +41,6 @@ function createUserStadistics(dataUsers){
 
     let genders = ["Male", "Female", "Other"];
     let resultsGenders = [];
-    let resultsAdmins = [];
 
     genders.forEach((element) => {
         let iterator = 0;
@@ -57,7 +57,9 @@ function createUserStadistics(dataUsers){
     let amount = dataUsers.filter(item => {
         return item.role == "Admin";
     })
-    let totalAdmins = amount.length;
+
+    let totalAdmins = amount.length < 10 ? "0" + amount.length : amount.length;
+    spanAdmins.innerText = totalAdmins;
     console.log(totalAdmins);
 
     spanUsers.innerText = totalItems;

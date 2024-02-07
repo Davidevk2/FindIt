@@ -1,11 +1,13 @@
 const canvasGender = document.getElementById("chartGender");
 const canvasLost = document.getElementById("chartLost");
 const canvasFound = document.getElementById("chartFound");
+const cavasThings = document.getElementById("chartThings");
 
 const spanUsers = document.getElementById("countUser");
 const spanAdmins = document.getElementById("countAdmins");
 const spanLost = document.getElementById("countLost");
 const spanFound = document.getElementById("countFound");
+const spanThings = document.getElementById("countThings");
 
 // make a request to get all data
 
@@ -13,6 +15,7 @@ async function loadAllData(){
     let urlUsers = "http://localhost:3000/users";
     let urlLost = "http://localhost:3000/lost_items";
     let urlFound = "http://localhost:3000/found_items";
+    let urlThings = "http://localhost:3000/lost_things";
     let urlMails= "http://localhost:3000/mails";
 
     // request to the users endpoint
@@ -27,6 +30,11 @@ async function loadAllData(){
     let requestFound = await fetch(urlFound);
     let dataFound = await requestFound.json();
     createFoundStadistics(dataFound);
+
+    let requestThings = await fetch(urlThings);
+    let dattThings = await requestThings.json();
+    createThingStadistics(dattThings);
+
     // request to the mails endPoint
     let requestEmails = await fetch(urlMails);
     let dataMails = await requestEmails.json();
@@ -60,7 +68,7 @@ function createUserStadistics(dataUsers){
 
     let totalAdmins = amount.length < 10 ? "0" + amount.length : amount.length;
     spanAdmins.innerText = totalAdmins;
-    console.log(totalAdmins);
+    // console.log(totalAdmins);
 
     spanUsers.innerText = totalItems;
     createChart(canvasGender, "doughnut", genders, "# number of users by gender", resultsGenders);
@@ -89,7 +97,7 @@ function createLostStadistics(dataLost) {
     spanLost.innerText = totalItems;
 
     // create chart
-    createChart(canvasLost, "bar", types_documents, "# of lost by document type", results);
+    createChart(canvasLost, "line", types_documents, "# of lost by document type", results);
 }
 
 // function to create found stadistics
@@ -113,9 +121,8 @@ function createFoundStadistics(dataFound) {
     })
     spanFound.innerText = totalItems;
 
-    createChart(canvasFound, "line", types_documents, "# of found by document type", results);
+    createChart(canvasFound, "bar", types_documents, "# of found by document type", results);
 }
-
 
 // function to create and list all emails
 function listAllMails(dataMails){
@@ -145,6 +152,29 @@ function listAllMails(dataMails){
 
 }
 
+function createThingStadistics(dataThings) {
+    // console.log(dataFound);
+
+    let totalItems = dataThings.length < 10 ? "0" + dataThings.length :  dataThings.length;
+
+    let things = ["keys", "wallets", "bags"];
+    let results = []
+
+    things.forEach((element) => {
+        let iterator = 0;
+        let amount = dataThings.map(item => {
+            if (element == item.element) {
+                iterator++;
+            }
+            return iterator;
+        })
+        results.push(iterator);
+    })
+    spanThings.innerText = totalItems;
+
+    createChart(cavasThings, "pie", things, "# of founds by object type", results);
+}
+
 
 // function to create charts with chart js
 function createChart(element, typeChar, labelsData, title, data){
@@ -157,13 +187,13 @@ function createChart(element, typeChar, labelsData, title, data){
                 barPercentage: 0.5,
                 label: title,
                 data: data,
-                // backgroundColor: ['rgba(255, 99, 132, 0.2)',
-                //     'rgba(255, 159, 64, 0.2)',
-                //     'rgba(255, 205, 86, 0.2)',
-                //     'rgba(75, 192, 192, 0.2)',
-                //     'rgba(54, 162, 235, 0.2)',
-                //     'rgba(153, 102, 255, 0.2)',
-                //     'rgba(201, 203, 207, 0.2)'],
+                backgroundColor: ['#36A2EB',
+                    '#FF6384',
+                    '#4BC0C0',
+                    '#FF9F40',
+                    '#9966FF',
+                    '#FFCD56',
+                    '#C9CBCF'],
                 // borderColor: ['rgb(255, 99, 132)',
                 //     'rgb(255, 159, 64)',
                 //     'rgb(255, 205, 86)',

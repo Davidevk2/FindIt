@@ -104,26 +104,105 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="nav-found" role="tabpanel" aria-labelledby="nav-found-tab">
-                        <div class="section found-items table-responsive">
-                            <h4>List of found items</h2>
-                                <div class="table-responsive">
-                                    <table class="table" id="foundTable">
-                                        <thead>
-                                            <tr>
-                                                <th>#</th>
-                                                <th>Report Id</th>
-                                                <th>Document</th>
-                                                <th>Missing Date</th>
-                                                <!-- <th></th>
-                                                                                            <th></th> -->
-                                                <th>Reported date</th>
-                                                <th>Status</th>
-                                                <th>Change status</th>
-                
-                                            </tr>
-                                        </thead>
-                                    </table>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h4>Register new Admin</h4>
+                                <form action="" class="form-uddate" name="updateForm">
+                                    <div class="row">
+                                        <div class="col-md-6 col-12">
+                                            <div class="form-group">
+                                                <label for="" class="required">Name:</label>
+                                                <input type="text" name="name" class="form-control form-required" placeholder="your name here">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-12">
+                                            <div class="form-group">
+                                                <label for="">Last name:</label>
+                                                <input type="text" name="lastName" class="form-control" placeholder="your last name here">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 col-12">
+                                            <div class="form-group">
+                                                <label for="">Identification:</label>
+                                                <input type="text" name="identification" value="" class="form-control"
+                                                    placeholder="your identification here">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-12">
+                                            <div class="form-group">
+                                                <label for="" class="required">Phone:</label>
+                                                <input type="text" name="phone" value="" class="form-control form-required"
+                                                    placeholder="your phone here">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="" class="required">Email:</label>
+                                                <input type="text" name="email" value="" class="form-control form-required"
+                                                    placeholder="enter your email here">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="" class="required">Password:</label>
+                                                <input type="text" name="password" value="" class="form-control form-required"
+                                                    placeholder="enter your password here">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="">Gender:</label>
+                                                <select name="gender" id="" class="form-select">
+                                                    <option value="">Select</option>
+                                                    <option value="Female">Female</option>
+                                                    <option value="Male">Male</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="">City:</label>
+                                                <input type="text" name="city" value="" class="form-control" placeholder="enter the city here">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-10">
+                                            <button type="button" class="btn btn-success" id="btnUpdate">Add new admin</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="section found-items table-responsive">
+                                    <h4>List of admins</h2>
+                                        <div class="table-responsive">
+                                            <table class="table" id="foundTable">
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Report Id</th>
+                                                        <th>Document</th>
+                                                        <th>Missing Date</th>
+                                                        <!-- <th></th>
+                                                                                                    <th></th> -->
+                                                        <th>Reported date</th>
+                                                        <th>Status</th>
+                                                        <th>Change status</th>
+                        
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                        </div>
                                 </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -138,7 +217,7 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
 
-    <script src="../assets/js/main.js"></script>
+    <!-- <script src="../assets/js/main.js"></script> -->
     <script src="../assets/js/session.js"></script>
     <!-- <script src="../assets/js/report.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>

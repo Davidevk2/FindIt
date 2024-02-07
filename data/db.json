@@ -44,14 +44,14 @@
     },
     {
       "id": "78e0",
-      "identification": "",
+      "identification": "1019",
       "name": "Daniela",
-      "last_name": "",
+      "last_name": "Guzman",
       "email": "daniela@gmail.com",
       "password": "1234",
       "phone": "32121",
       "gender": "",
-      "city": "",
+      "city": "Medellín ",
       "role": "User",
       "last_session": "",
       "creation_date": "Wed, 07 Feb 2024 04:10:07 GMT"

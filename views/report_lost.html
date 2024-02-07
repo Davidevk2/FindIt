@@ -70,16 +70,16 @@
                                                 <label for="document_type" class="required">Document type:</label>
                                                 <select name="document_type" id="document_type"
                                                     class="form-select form-required">
-                                                    <option value="cc">Cédula de Ciudadania</option>
-                                                    <option value="ti">Tarjeta de identidad</option>
-                                                    <option value="pasaporte">Pasaporte</option>
-                                                    <option value="lconducion">Licencia Conducción</option>
+                                                    <option value="cc">Identification card</option>
+                                                    <option value="ti">Identity card</option>
+                                                    <option value="pasaporte">Passport</option>
+                                                    <option value="lconducion">Driving license</option>
                                                     <option value="carnet">Carnet</option>
-                                                    <option value="otro">Otro</option>
+                                                    <option value="otro">Other</option>
                                                 </select>
                                                 <div class="form-group hidden">
                                                     <input type="radio" name="" value="" id="" class="" placeholder="">
-                                                    <label for="">Billetera completa</label>
+                                                    <label for="">Wallet</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -157,14 +157,42 @@
                         </div>
                         <div class="col-md-6">
                             <div class="middle-steps">
-                                <h4>Stesp or Recommendations</h4>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil unde libero
-                                    perferendis! Repellat obcaecati molestiae dignissimos et eveniet tempora architecto
-                                    officia nobis delectus quasi qui ut ullam ratione corrupti soluta enim, corporis ea,
-                                    voluptates consequatur.</p>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem veniam fuga
-                                    numquam, voluptatibus laboriosam neque sapiente. Dicta, porro architecto! Expedita!
-                                </p>
+                                <h4>Steps or Recommendations</h4>
+                                <div class="steps" id="step_CC">
+                                    <ul>
+                                        <li>Fill out the necessary information, including the location and date of loss, any identifying details about the card, and your contact information.</li>
+                                        <li>If you've lost your ID card, notify the relevant authorities or institutions to request a replacement.</li>
+                                        <li>Consider placing a temporary hold on any accounts or services associated with your lost ID card to prevent potential misuse.</li>
+                                    </ul>
+                                </div>
+                                <div class="steps hidden" id="step_TI">
+                                    <ul>
+                                        <li>Provide detailed information about the loss, including the location and date.</li>
+                                        <li>Contact the appropriate government agency to report your lost identity card and request a replacement.</li>
+                                        <li>Monitor your financial accounts and credit report for any suspicious activity, as your identity card contains sensitive personal information.</li>
+                                    </ul>
+                                </div>
+                                <div class="steps hidden" id="step_PP">
+                                    <ul>
+                                        <li>Enter information about the lost passport, such as the passport number and issuing country.</li>
+                                        <li>Immediately report your lost passport to the nearest embassy or consulate to prevent identity theft or fraud.</li>
+                                        <li>Consider placing a travel alert on your passport to prevent unauthorized use.</li>
+                                    </ul>
+                                </div>
+                                <div class="steps hidden" id="step_DL">
+                                    <ul>
+                                        <li>Provide details about the loss, including the license number and any relevant information.</li>
+                                        <li>Contact the appropriate Department of Motor Vehicles (DMV) or licensing authority to report your lost driving license and request a replacement.</li>
+                                        <li>Consider placing a temporary hold on any driving-related services or accounts associated with your lost license.</li>
+                                    </ul>
+                                </div>
+                                <div class="steps hidden" id="step_CT">
+                                    <ul>
+                                        <li>Provide detailed information about the lost carnet, such as the issuing organization and any unique identifiers.</li>
+                                        <li>Contact the issuing organization or institution to report your lost carnet and request a replacement.</li>
+                                        <li>If your carnet grants access to specific facilities or services, notify the relevant authorities to prevent unauthorized use.</li>
+                                    </ul>
+                                </div>
                             </div>
 
                         </div>

@@ -1,0 +1,125 @@
+body {
+    background-color: #F4F6F9;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+}
+
+.small-card {
+    flex: 1;
+    width: 100%;
+    background-color: white;
+    border-radius: 6px;
+    border: 1px solid rgba(181, 181, 181, 0.756);
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.small-card .rounded-icon {
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    /*background-color: rgba(13, 255, 0, 0.3);
+    border: 1px solid rgb(2, 181, 5);*/
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.rounded-icon i {
+    margin: auto;
+    color: #2C2D42;
+}
+
+.widget-text {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+.widget-text .title {
+    padding: 0;
+    top: 0;
+    margin: 0px;
+    color: #2C2D42;
+    /* color: #1E1E1E; */
+}
+
+.widget-text .disabled {
+    margin-top: 10px;
+    /* color: #2C2D42; */
+    color: #6A6A6D;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.grid-charts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
+
+.card {
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* .grid-charts .card{
+            width: 100%;
+            max-height: 350px;
+        } */
+
+.grid-charts .item-one {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+}
+
+.grid-charts .item-three {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+}
+
+/* .grid-charts .item-four{
+            grid-column-start: 1;
+            grid-column-end: 3;
+        } */
+
+.lienzo {
+    width: 100%;
+    max-width: 100%;
+    max-height: 450px;
+}
+
+@media screen and (max-width: 600px) {
+    .grid-charts {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 10px;
+    }
+
+    .grid-charts .item-one {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    
+    }
+    
+    .grid-charts .item-three {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 3;
+        grid-row-end:4;
+    
+    }
+}

@@ -52,6 +52,9 @@ async function singUpUser(){
                 // clearData();
                 localStorage.setItem("login", loggin);
                 localStorage.setItem("user", logged);
+                localStorage.setItem("name", name);
+                localStorage.setItem("role", "User");
+
                 window.location.href = "home.html";
             }else{
                 message = "Error trying to create the user!";
@@ -77,37 +80,3 @@ async function singUpUser(){
 
 }
 
-
-// // get the current Date  to create user
-// function getCurrentDate(){
-//     return date.toUTCString();
-// }
-
-// // Show messages when the required inputs are empty
-// function showInfoMessage(message, color) {
-//     let inputs = document.querySelectorAll(".form-control");
-
-//     inputs.forEach((input) => {
-//         if(input.value == ""){
-//             input.classList.add("is-invalid");
-//             input.style.border = "1px solid red";
-
-//         }
-//     });
-
-//     spanMessages.classList.toggle("hidden");
-//     spanMessages.style.color = color;
-//     spanMessages.innerText = message;
-
-//     setTimeout(() => {
-//         spanMessages.classList.toggle("hidden");
-//         spanMessages.innerText = "";
-
-//         inputs.forEach((input) => {
-//             input.classList.remove("is-invalid");
-//             input.style.border = "1px solid #6A6A6D";
-//         });
-
-//     }, 5000);
-
-// }

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindIt - Dashboard</title>
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="../assets/css/app.css" rel="stylesheet">
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: #F4F6F9;
+        }
+
+        .row {
+            width: 100%;
+            display: flex;
+        }
+        .small-card {
+            flex: 1;
+            width: 100%;
+            background-color: white;
+            border-radius: 6px;
+            border: 1px solid rgba(181, 181, 181, 0.756);
+            margin-bottom: 10px;
+            align-items: center;
+        }
+
+        .small-card .rounded-icon {
+            margin: auto;
+            justify-content: center;
+            text-align: center;
+            background-color: rgba(13, 255, 0, 0.3);
+            border: 1px solid rgb(2, 181, 5);
+            width: 80%;
+            height: 80%;
+            border-radius: 50%;
+        }
+
+        .widget-text {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .widget-text .title {
+            padding: 0;
+            top: 0;
+            margin: 0px;
+            color: #2C2D42;
+            /* color: #1E1E1E; */
+        }
+
+        .widget-text .disabled {
+            margin-top: 10px;
+            /* color: #2C2D42; */
+            color: #6A6A6D;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .grid-charts{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 10px;
+        }
+        .card{border-radius: 8px;
+        padding: 10px;}
+        /* .grid-charts .card{
+            width: 100%;
+            max-height: 350px;
+        } */
+        
+        .grid-charts .item-one{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 3;
+
+        }
+
+        .grid-charts .item-three{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+
+        }
+
+        /* .grid-charts .item-four{
+            grid-column-start: 1;
+            grid-column-end: 3;
+        } */
+
+        .lienzo {
+            width: 100%;
+            max-width: 100%;
+            max-height: 450px;
+        }
+    </style>
+    <div class="container">
+        <h3>Dashboard</h3>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="small-card">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="rounded-icon">
+                                <i class="bi bi-people  avatar-title text-success"></i>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="widget-text text-end">
+                                <h3 class="title"><span class="" id="countUser">127</span></h3>
+                                <span class="disabled">Users</span>
+                            </div>
+                        </div>
+                    </div> <!-- end row-->
+
+                </div> <!-- end widget-rounded-circle-->
+            </div>
+            <div class="col-md-3">
+                <div class="small-card">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="rounded-icon">
+                                <i class="bi bi-wallet avatar-title text-success"></i>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="widget-text text-end">
+                                <h3 class="title"><span class="" id="countLost">127</span></h3>
+                                <span class="disabled">Lost items</span>
+                            </div>
+                        </div>
+                    </div> <!-- end row-->
+            
+                </div> <!-- end widget-rounded-circle-->
+            </div>
+
+            <div class="col-md-3">
+                <div class="small-card">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="rounded-icon">
+                                <i class="bi bi-person-vcard  avatar-title text-success"></i>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="widget-text text-end">
+                                <h3 class="title"><span class="" id="countFound">127</span></h3>
+                                <span class="disabled">Found items</span>
+                            </div>
+                        </div>
+                    </div> <!-- end row-->
+            
+                </div> <!-- end widget-rounded-circle-->
+            </div>
+
+        </div>
+        <div class="grid-charts">
+            <div class="grid-item-chart item-one">
+                <div class="card">
+                    <canvas class="lienzo" id="chartGender"></canvas>
+                </div>
+            </div>
+            <div class="grid-item-chart item-two">
+                <div class="card">
+                    <canvas class="lienzo" id="chartLost"></canvas>
+                </div>
+            </div>
+            <div class="grid-item-chart item-three">
+                <div class="card">
+                    <canvas class="lienzo" id="chartFound"></canvas>
+                </div>
+            </div>
+            <div class="grid-item-chart item-four">
+                <div class="card">
+                    <!-- <canvas class="lienzo" id="chartFound"></canvas> -->
+                    <table class="table table-striped table-hover" id="tblMails">
+                        <thead>
+                            <tr>
+                                <td colspan="2">Inbox</td>
+                                <td colspan="3"><input type="search" name="" id="" class="form-control" placeholder="search"></td>
+                                <td colspan="1"><button class="btn btn-sm btn-primary"><i class="bi-search"></i></button></td>
+                            </tr>
+                            <tr>
+                                <th><input type="checkbox" name="" id=""></th>
+                                <th><span><i class="bi-trash"></i></span></th>
+                                <th><span><i class="bi bi-arrow-clockwise"></i></span></th>
+                                <th></th>
+                                <th colspan="2">50/200</th>
+                            </tr>
+                        </thead>
+                        
+                    </table>
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+
+
+    <script src="../assets/js/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+
+</html>

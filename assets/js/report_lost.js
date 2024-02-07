@@ -1,5 +1,5 @@
 const date = new Date();
-
+// get elements from the html file 
 const btnReport = document.getElementById("btnReport");
 const noOption = document.getElementById("noOption");
 const yesOption = document.getElementById("yesOption");

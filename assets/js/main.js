@@ -65,3 +65,43 @@ window.onscroll = function () {
 function getCurrentDate() {
     return date.toUTCString();
 }
+
+// function to change the steps 
+function changeSteps() {
+    const selectList = document.getElementById("document_type");
+    let divSteps = document.querySelectorAll(".steps");
+
+    if (selectList.value == "cc") {
+        divSteps[0].style.display = "block";
+    } else if (selectList.value == "ti") {
+        divSteps[0].style.display = "none";
+        divSteps[2].style.display = "none";
+        divSteps[3].style.display = "none";
+        divSteps[4].style.display = "none";
+        divSteps[1].style.display = "block";
+    } else if (selectList.value == "pasaporte") {
+        divSteps[0].style.display = "none";
+        divSteps[1].style.display = "none";
+        divSteps[3].style.display = "none";
+        divSteps[4].style.display = "none";
+        divSteps[2].style.display = "block";
+    } else if (selectList.value == "lconducion") {
+        divSteps[0].style.display = "none";
+        divSteps[1].style.display = "none";
+        divSteps[2].style.display = "none";
+        divSteps[4].style.display = "none";
+        divSteps[3].style.display = "block";
+    } else if (selectList.value == "carnet") {
+        divSteps[0].style.display = "none";
+        divSteps[1].style.display = "none";
+        divSteps[2].style.display = "none";
+        divSteps[3].style.display = "none";
+        divSteps[4].style.display = "block";
+    } else {
+        divSteps[4].style.display = "none";
+        divSteps[1].style.display = "none";
+        divSteps[2].style.display = "none";
+        divSteps[3].style.display = "none";
+        divSteps[0].style.display = "block";
+    }
+}

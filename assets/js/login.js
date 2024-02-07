@@ -32,7 +32,13 @@ async function getDataByUser(){
             localStorage.setItem("user", `${logged}`);
             localStorage.setItem("name", `${userName}`);
             localStorage.setItem("role", `${role}`);
-            location.href = "./home.html";
+            
+            if(role === "Admin"){
+                location.href = "./dashboard.html";
+                
+            }else{
+                location.href = "./home.html";
+            }
            
         }else{
             message = "Email and/or password incorrect!";

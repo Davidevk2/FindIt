@@ -55,6 +55,20 @@
       "role": "User",
       "last_session": "",
       "creation_date": "Wed, 07 Feb 2024 04:10:07 GMT"
+    },
+    {
+      "id": "e87c",
+      "identification": "",
+      "name": "admin",
+      "last_name": "",
+      "email": "admin@findit.com",
+      "password": "admin",
+      "phone": "32020",
+      "gender": "",
+      "city": "",
+      "role": "Admin",
+      "last_session": "",
+      "creation_date": "Wed, 07 Feb 2024 05:17:03 GMT"
     }
   ],
   "lost_items": [

@@ -10,8 +10,8 @@ async function loadLostThings(){
     createCards(response);
 }
 
+let container = document.getElementById("cards-container");
 function createCards(data){
-    let container = document.getElementById("cards-container");
 
     let row = document.createElement("div");
     row.classList.add("row");
@@ -25,7 +25,7 @@ function createCards(data){
                     <a href="#">
                         <div class="d-flex">
                             <div>
-                                <h5 class="mb-2">${element.element}n</h5>
+                                <h5 class="mb-2">${element.element}</h5>
 
                                 <span class="mb-0">${element.description}</span>
                             </div>
@@ -33,7 +33,7 @@ function createCards(data){
                             <span class="badge bg-design rounded-pill ms-auto">${element.id}</span>
                         </div>
 
-                        <img src="https://cdn.pixabay.com/photo/2023/09/08/05/28/gibbon-8240408_1280.png"
+                        <img src="${element.img}"
                             class="custom-block-image img-fluid" alt="${element.id}">
                     </a>
                 </div>`;
@@ -43,3 +43,28 @@ function createCards(data){
         console.log(element);
     });
 }
+
+const inputSearch = document.getElementById("keyword");
+
+inputSearch.addEventListener("keyup", async (event)=>{
+    let search = event.target.value;
+    console.log(search.length);
+
+    const divResults = document.getElementById("results");
+
+    if (search.length = 0 || isNaN(search.length) || !search) {
+        loadLostThings();
+    }else{
+        container.innerHTML = "";
+        let request = await fetch("http://localhost:3000/lost_things/");
+        let response = await request.json();
+
+        let result = response.filter(item =>{
+            return item.element.includes(search) || item.description.includes(search);
+        })
+
+        createCards(result);
+        
+    }
+})
+

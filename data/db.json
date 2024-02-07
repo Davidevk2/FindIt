@@ -233,7 +233,7 @@
       "element": "keys",
       "reported_date": "2022-01-01",
       "userId": "12345",
-      "img": "example.com/keys.jpg",
+      "img": "../assets/images/keys.jpg",
       "description": "Small set of keys",
       "id": "1",
       "status": "lost"
@@ -242,7 +242,7 @@
       "element": "wallets",
       "reported_date": "2022-01-02",
       "userId": "67890",
-      "img": "example.com/wallet.jpg",
+      "img": "../assets/images/wallet.jpg",
       "description": "Black leather wallet",
       "id": "2",
       "status": "lost"
@@ -251,7 +251,7 @@
       "element": "bags",
       "reported_date": "2022-01-03",
       "userId": "54321",
-      "img": "example.com/bag.jpg",
+      "img": "../assets/images/bag.jpg",
       "description": "Red backpack",
       "id": "3",
       "status": "lost"
@@ -260,7 +260,7 @@
       "element": "keys",
       "reported_date": "2022-01-04",
       "userId": "09876",
-      "img": "example.com/keys.jpg",
+      "img": "../assets/images/keys.jpg",
       "description": "Large set of keys",
       "id": "4",
       "status": "lost"
@@ -269,7 +269,7 @@
       "element": "wallets",
       "reported_date": "2022-01-05",
       "userId": "45678",
-      "img": "example.com/wallet.jpg",
+      "img": "../assets/images/wallet.jpg",
       "description": "Brown leather wallet",
       "id": "5",
       "status": "lost"
@@ -278,7 +278,7 @@
       "element": "bags",
       "reported_date": "2022-01-06",
       "userId": "76543",
-      "img": "example.com/bag.jpg",
+      "img": "../assets/images/bag.jpg",
       "description": "Blue backpack",
       "id": "6",
       "status": "lost"
@@ -287,7 +287,7 @@
       "element": "keys",
       "reported_date": "2022-01-07",
       "userId": "23456",
-      "img": "example.com/keys.jpg",
+      "img": "../assets/images/keys.jpg",
       "description": "Keychain with a single key",
       "id": "7",
       "status": "lost"
@@ -296,7 +296,7 @@
       "element": "wallets",
       "reported_date": "2022-01-08",
       "userId": "65432",
-      "img": "example.com/wallet.jpg",
+      "img": "../assets/images/wallet.jpg",
       "description": "Slim cardholder",
       "id": "8",
       "status": "lost"
@@ -305,7 +305,7 @@
       "element": "bags",
       "reported_date": "2022-01-09",
       "userId": "43210",
-      "img": "example.com/bag.jpg",
+      "img": "../assets/images/bag.jpg",
       "description": "Green tote bag",
       "id": "9",
       "status": "lost"
@@ -314,7 +314,7 @@
       "element": "keys",
       "reported_date": "2022-01-10",
       "userId": "87654",
-      "img": "example.com/keys.jpg",
+      "img": "../assets/images/keys.jpg",
       "description": "Key fob with a car key",
       "id": "10",
       "status": "lost"
@@ -323,7 +323,7 @@
       "element": "wallets",
       "reported_date": "2022-01-11",
       "userId": "34567",
-      "img": "example.com/wallet.jpg",
+      "img": "../assets/images/wallet.jpg",
       "description": "Zip-around wallet",
       "id": "11",
       "status": "lost"
@@ -332,7 +332,7 @@
       "element": "bags",
       "reported_date": "2022-01-12",
       "userId": "98765",
-      "img": "example.com/bag.jpg",
+      "img": "../assets/images/bag.jpg",
       "description": "Canvas messenger bag",
       "id": "12",
       "status": "lost"
@@ -341,7 +341,7 @@
       "element": "keys",
       "reported_date": "2022-01-13",
       "userId": "87654",
-      "img": "example.com/keys.jpg",
+      "img": "../assets/images/keys.jpg",
       "description": "Set of house keys",
       "id": "13",
       "status": "lost"
@@ -350,7 +350,7 @@
       "element": "wallets",
       "reported_date": "2022-01-14",
       "userId": "23456",
-      "img": "example.com/wallet.jpg",
+      "img": "../assets/images/wallet.jpg",
       "description": "Bifold wallet",
       "id": "14",
       "status": "lost"
@@ -359,7 +359,7 @@
       "element": "bags",
       "reported_date": "2022-01-15",
       "userId": "65432",
-      "img": "example.com/bag.jpg",
+      "img": "../assets/images/bag.jpg",
       "description": "Leather duffel bag",
       "id": "15",
       "status": "lost"
@@ -368,7 +368,7 @@
       "element": "keys",
       "reported_date": "2022-01-16",
       "userId": "54321",
-      "img": "example.com/keys.jpg",
+      "img": "../assets/images/keys.jpg",
       "description": "Lanyard with a set of keys",
       "id": "16",
       "status": "lost"
@@ -377,7 +377,7 @@
       "element": "wallets",
       "reported_date": "2022-01-17",
       "userId": "12345",
-      "img": "example.com/wallet.jpg",
+      "img": "../assets/images/wallet.jpg",
       "description": "Designer clutch",
       "id": "17",
       "status": "lost"
@@ -386,7 +386,7 @@
       "element": "bags",
       "reported_date": "2022-01-18",
       "userId": "67890",
-      "img": "example.com/bag.jpg",
+      "img": "../assets/images/bag.jpg",
       "description": "Black leather shoulder bag",
       "id": "18",
       "status": "lost"
@@ -395,7 +395,7 @@
       "element": "keys",
       "reported_date": "2022-01-19",
       "userId": "54321",
-      "img": "example.com/keys.jpg",
+      "img": "../assets/images/keys.jpg",
       "description": "Single key with a keychain",
       "id": "19",
       "status": "lost"
@@ -404,7 +404,7 @@
       "element": "wallets",
       "reported_date": "2022-01-20",
       "userId": "67890",
-      "img": "example.com/wallet.jpg",
+      "img": "../assets/images/wallet.jpg",
       "description": "Trifold wallet",
       "id": "20",
       "status": "lost"
@@ -413,7 +413,7 @@
       "element": "bags",
       "reported_date": "2022-01-21",
       "userId": "12345",
-      "img": "example.com/bag.jpg",
+      "img": "../assets/images/bag.jpg",
       "description": "Nylon backpack",
       "id": "21",
       "status": "lost"
@@ -422,7 +422,7 @@
       "element": "keys",
       "reported_date": "2022-01-22",
       "userId": "23456",
-      "img": "example.com/keys.jpg",
+      "img": "../assets/images/keys.jpg",
       "description": "Set of office keys",
       "id": "22",
       "status": "lost"
@@ -431,7 +431,7 @@
       "element": "wallets",
       "reported_date": "2022-01-23",
       "userId": "45678",
-      "img": "example.com/wallet.jpg",
+      "img": "../assets/images/wallet.jpg",
       "description": "Leather money clip",
       "id": "23",
       "status": "lost"
@@ -440,7 +440,7 @@
       "element": "bags",
       "reported_date": "2022-01-24",
       "userId": "76543",
-      "img": "example.com/bag.jpg",
+      "img": "../assets/images/bag.jpg",
       "description": "Pink tote bag",
       "id": "24",
       "status": "lost"
@@ -449,7 +449,7 @@
       "element": "keys",
       "reported_date": "2022-01-25",
       "userId": "09876",
-      "img": "example.com/keys.jpg",
+      "img": "../assets/images/keys.jpg",
       "description": "Keychain with a house key",
       "id": "25",
       "status": "lost"
@@ -458,7 +458,7 @@
       "element": "wallets",
       "reported_date": "2022-01-26",
       "userId": "45678",
-      "img": "example.com/wallet.jpg",
+      "img": "../assets/images/wallet.jpg",
       "description": "Slim leather wallet",
       "id": "26",
       "status": "lost"
@@ -467,7 +467,7 @@
       "element": "bags",
       "reported_date": "2022-01-27",
       "userId": "76543",
-      "img": "example.com/bag.jpg",
+      "img": "../assets/images/bag.jpg",
       "description": "Leather crossbody bag",
       "id": "27",
       "status": "lost"
@@ -476,7 +476,7 @@
       "element": "keys",
       "reported_date": "2022-01-28",
       "userId": "23456",
-      "img": "example.com/keys.jpg",
+      "img": "../assets/images/keys.jpg",
       "description": "Set of locker keys",
       "id": "28",
       "status": "lost"
@@ -485,7 +485,7 @@
       "element": "wallets",
       "reported_date": "2022-01-29",
       "userId": "65432",
-      "img": "example.com/wallet.jpg",
+      "img": "../assets/images/wallet.jpg",
       "description": "Travel wallet",
       "id": "29",
       "status": "lost"
@@ -494,7 +494,7 @@
       "element": "bags",
       "reported_date": "2022-01-30",
       "userId": "43210",
-      "img": "example.com/bag.jpg",
+      "img": "../assets/images/bag.jpg",
       "description": "Small shoulder bag",
       "id": "30",
       "status": "lost"
